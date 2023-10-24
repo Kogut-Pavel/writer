@@ -1,0 +1,102 @@
+.about {
+    &__top-text {
+        margin-bottom: 3.5rem;
+        text-indent: 40%;
+        font-size: 3.5rem;
+        font-weight: 600;
+        line-height: 111%;
+        text-transform: uppercase;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-bottom: 3.5rem;
+    }
+    &__right {
+        display: flex;
+        flex-direction: column;
+    }
+    &__text {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    .about__text {
+        p {
+            font-family: 'Inter', sans-serif;
+            max-width: 28.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+    .read-more {
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+        line-height: 104%;
+        text-transform: uppercase;
+        color: #959595;
+    }
+    &__media {
+        display: flex;
+        gap: 2rem;
+        margin-top: auto;
+        &-books,
+        &-personal {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            max-width: 28.5rem;
+            width: 100%;
+            font-weight: 500;
+            line-height: 104%;
+            text-transform: uppercase;
+            color: $secondary;
+        }
+        &-books {
+            gap: 2.6rem;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        
+        &-block {
+            position: relative;
+            padding: 1.3rem 2rem 1.9rem 0;
+            max-width: 28.5rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            border-top: .05rem solid $primary;
+            &:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: -1rem;
+                width: .05rem;
+                height: 100%;
+                background-color: $primary;
+            }
+            div {
+                font-size: 6rem;
+                font-weight: 600;
+                line-height: 116%;
+                text-transform: uppercase;
+                color: $secondary;
+            }
+            span {
+                font-family: 'Inter', sans-serif;
+                font-weight: 500;
+                line-height: 116%;
+                text-transform: uppercase;
+            }
+            
+        }
+    }
+}
