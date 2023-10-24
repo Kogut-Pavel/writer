@@ -3,16 +3,21 @@
 @import "./vendor/reset";
 
 
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Inter', sans-serif;
+// font-family: 'Russo One', sans-serif;
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
     line-height: 111%;
     color: $primary;
+    background-color: #EAEBE3;
 }
 
 *,
@@ -36,12 +41,27 @@ a {
     margin: 0 auto;
 }
 
+.secondary-color {
+    color: $secondary;
+}
+
+section {
+    padding-bottom: 10rem;
+}
+
 /* Blocks */
+
+// Mini-blocks
+@import "blocks/mini-blocks/nav";
+@import "blocks/mini-blocks/title";
 
 
 // Common blocks
 @import "blocks/header";
 
 
+// Main page
+@import "blocks/hero/hero";
+@import "blocks/about/about.scss"
 
 

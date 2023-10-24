@@ -1,0 +1,17 @@
+nav {
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 5.6rem;
+        li {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.98px;
+            text-transform: uppercase;
+            cursor: pointer;
+            &.active {
+                font-weight: 700;
+            }
+        }
+    }
+}
