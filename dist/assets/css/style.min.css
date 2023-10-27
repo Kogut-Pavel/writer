@@ -550,3 +550,37 @@ nav ul {
       font-weight: 500;
       line-height: 116%;
       text-transform: uppercase; }
+
+.booklist__wrapper {
+  position: relative;
+  height: 17rem;
+  padding: .5rem 0 2rem 0;
+  background: #3D4031;
+  color: #fff;
+  font-weight: 600;
+  line-height: 101%;
+  text-transform: uppercase;
+  overflow: hidden; }
+  .booklist__wrapper::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: .7rem;
+    width: 100%;
+    height: 6px;
+    border-bottom: 6px dotted #fff; }
+
+.booklist ul {
+  position: absolute;
+  bottom: 35px;
+  left: -5%;
+  width: 20rem;
+  height: 100%;
+  transform: rotate(-90deg);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: .6rem; }
+  .booklist ul li {
+    max-width: min-content;
+    min-width: 15rem; }
