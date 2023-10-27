@@ -421,6 +421,8 @@ nav ul li.active {
 .title {
     margin-bottom: 3.5rem;
     text-transform: uppercase;
+    font-weight: 600;
+    line-height: 104%;
 }
 
 .title_h1 {
@@ -432,9 +434,16 @@ nav ul li.active {
 
 .title_h2 {
     font-size: 3rem;
-    font-weight: 600;
-    line-height: 104%;
     color: #626E13;
+}
+
+.title_h3 {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+.title_h4 {
+    font-size: 2rem;
 }
 
 .header {
@@ -674,6 +683,149 @@ nav ul li.active {
     text-transform: uppercase;
 }
 
-.booklist {
+.booklist__wrapper {
+    position: relative;
+    height: 17rem;
+    padding: .5rem 0 2rem 0;
     background: #3D4031;
+    color: #fff;
+    font-weight: 600;
+    line-height: 101%;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.booklist__wrapper::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: .7rem;
+    width: 100%;
+    height: 6px;
+    border-bottom: 6px dotted #fff;
+}
+
+.booklist ul {
+    position: absolute;
+    bottom: 35px;
+    left: -5%;
+    width: 20rem;
+    height: 100%;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.booklist ul li {
+    max-width: -webkit-min-content;
+    max-width: min-content;
+    min-width: 15rem;
+}
+
+.books h2 {
+    position: relative;
+}
+
+.books h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3.5rem;
+    left: 0;
+    width: 100%;
+    height: 0.05rem;
+    background-color: #959595;
+}
+
+.books__inner {
+    padding: 3.5rem 0;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem;
+}
+
+.books__text-block {
+    padding: 3.5rem;
+    background-color: #3D4031;
+    color: #fff;
+}
+
+.books__text-block p,
+  .books__text-block .author-info {
+    font-family: 'Inter', sans-serif;
+}
+
+.books__text-block p {
+    margin-bottom: 2rem;
+}
+
+.books__text-block, .books__somebooks {
+    max-width: calc(50% - 1rem);
+    width: 100%;
+}
+
+.books__somebooks ul {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    width: 472px;
+    height: 100%;
+}
+
+.books__somebooks ul li {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0rem 1.5rem 0rem 0.7rem;
+    height: 6.3rem;
+    border: 1px solid #626E13;
+    cursor: pointer;
+}
+
+.books__somebooks ul li .genres {
+    font-family: 'Inter', sans-serif;
+    max-width: 14.5rem;
+}
+
+.books__somebooks ul li h3 {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    max-width: 32.5rem;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.books__somebooks ul li.active {
+    background-color: #626E13;
+    color: #fff;
+}
+
+.books__book {
+    position: relative;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.books__book img {
+    position: absolute;
+    z-index: -1;
+}
+
+.books__book h4 {
+    color: #3D4031;
 }
