@@ -1,0 +1,6 @@
+.books {
+    h2 {
+        position: relative;
+        @include line($lightgray);
+    }
+}
