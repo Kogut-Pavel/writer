@@ -397,6 +397,13 @@ section {
     padding-bottom: 10rem;
 }
 
+img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 /* Blocks */
 nav ul {
     display: -ms-flexbox;
@@ -444,6 +451,23 @@ nav ul li.active {
 
 .title_h4 {
     font-size: 2rem;
+}
+
+.button_sm {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    font-weight: 500;
+    line-height: 104%;
+    text-transform: uppercase;
+    border-radius: 29px;
+    border: 1px solid #626E13;
+    color: #626E13;
+    transition: all .2s linear;
+}
+
+.button_sm:hover {
+    color: #fff;
+    background-color: #626E13;
 }
 
 .header {
@@ -510,7 +534,7 @@ nav ul li.active {
     bottom: -3.5rem;
     left: 0;
     width: 100%;
-    height: 0.05rem;
+    height: 0.1rem;
     background-color: #626E13;
 }
 
@@ -555,7 +579,7 @@ nav ul li.active {
     bottom: -3.5rem;
     left: 0;
     width: 100%;
-    height: 0.05rem;
+    height: 0.1rem;
     background-color: #626E13;
 }
 
@@ -746,7 +770,7 @@ nav ul li.active {
     bottom: -3.5rem;
     left: 0;
     width: 100%;
-    height: 0.05rem;
+    height: 0.1rem;
     background-color: #959595;
 }
 
@@ -899,7 +923,7 @@ nav ul li.active {
     bottom: -3.5rem;
     left: 0;
     width: 100%;
-    height: 0.05rem;
+    height: 0.1rem;
     background-color: #959595;
 }
 
@@ -933,7 +957,7 @@ nav ul li.active {
     bottom: -3.5rem;
     left: 0;
     width: 100%;
-    height: 0.05rem;
+    height: 0.1rem;
     background-color: #959595;
 }
 
@@ -953,7 +977,7 @@ nav ul li.active {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 0.05rem;
+    height: 0.1rem;
     background-color: #959595;
 }
 
@@ -975,7 +999,7 @@ nav ul li.active {
 }
 
 .news__row:nth-child(even) .news__block.links a {
-    transition: all .2s linear;
+    transition: all 0.2s linear;
 }
 
 .news__row:nth-child(even) .news__block.links a:hover {
@@ -1016,7 +1040,7 @@ nav ul li.active {
 }
 
 .news__block.links a {
-    transition: all .2s linear;
+    transition: all 0.2s linear;
 }
 
 .news__block.links a:hover {
@@ -1058,7 +1082,7 @@ nav ul li.active {
 }
 
 .news__block.video img {
-    border-radius: .2rem;
+    border-radius: 0.2rem;
 }
 
 .news__block .date {
@@ -1124,7 +1148,7 @@ nav ul li.active {
 }
 
 .quote blockquote::before {
-    content: url("../images/icons/wing.svg");
+    content: url("../images/icons/wing.png");
     position: absolute;
     top: -3rem;
     left: -9rem;
@@ -1134,4 +1158,202 @@ nav ul li.active {
     max-width: 235px;
     margin-left: auto;
     margin-right: 6.3rem;
+}
+
+.blog__inner {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem;
+}
+
+.blog__inner::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #959595;
+}
+
+.blog__left, .blog__right {
+    max-width: calc(50% - 1rem);
+    width: 100%;
+}
+
+.blog__left {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.blog__left::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    width: 1px;
+    height: 100%;
+    background-color: #959595;
+}
+
+.blog__left .blog__subtitle {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 104%;
+    text-transform: uppercase;
+}
+
+.blog .big-img {
+    height: auto;
+}
+
+.blog__left-down {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+}
+
+.blog__block {
+    max-width: 28.5rem;
+    width: 100%;
+}
+
+.blog__block.block-2 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.blog__block p {
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 1.2rem;
+}
+
+.blog__links {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.blog__right .blog__subtitle {
+    margin-bottom: 4rem;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 111%;
+    text-transform: uppercase;
+}
+
+.blog__right .blog__subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #959595;
+}
+
+.blog__right-down {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem;
+}
+
+.blog__right-left {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.blog__right-left .top {
+    min-height: 27.6rem;
+}
+
+.blog__right-right {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.blog .blog__block.news {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.blog .blog__block.news time,
+  .blog .blog__block.news .read-more {
+    font-family: 'Inter', sans-serif;
+    color: #959595;
+}
+
+.blog .blog__block.news .blog__block-header {
+    color: #626E13;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 104%;
+    text-transform: uppercase;
+}
+
+.blog .blog__block.news .read-more {
+    display: block;
+    margin-top: auto;
+    text-align: right;
+    transition: all 0.2s linear;
+}
+
+.blog .blog__block.news .read-more:hover {
+    color: #3D4031;
+}
+
+.reviews__header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.reviews h2, .reviews__header-right {
+    max-width: calc(50% - 1rem);
+    width: 100%;
+}
+
+.reviews__header-right ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 2.1rem;
+}
+
+.reviews__subtitle {
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 111%;
 }

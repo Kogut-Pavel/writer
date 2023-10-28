@@ -410,6 +410,33 @@ nav ul {
     color: #fff;
     background-color: #626E13; }
 
+.reviewofwork {
+  max-width: 59rem;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: .5rem;
+  border: 1px solid #626E13; }
+  .reviewofwork__image {
+    width: 16.3rem;
+    height: 16.3rem; }
+    .reviewofwork__image img {
+      width: auto;
+      border-radius: 0.5rem; }
+  .reviewofwork__content p {
+    font-family: 'Inter', sans-serif;
+    width: 40.2rem; }
+  .reviewofwork__name {
+    margin-bottom: .2rem;
+    font-weight: 600;
+    line-height: 104%;
+    text-transform: uppercase; }
+  .reviewofwork__title {
+    margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
+    color: #959595; }
+
 .header {
   position: relative;
   padding: 1.2rem 0;
@@ -1012,3 +1039,36 @@ nav ul {
     transition: all 0.2s linear; }
     .blog .blog__block.news .read-more:hover {
       color: #3D4031; }
+
+.reviews__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 3rem; }
+
+.reviews h2, .reviews__header-right {
+  max-width: calc(50% - 1rem);
+  width: 100%; }
+
+.reviews__header-right ul {
+  display: flex;
+  align-items: center;
+  gap: 2.1rem; }
+
+.reviews__subtitle {
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 111%; }
+
+.reviews__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; }
+
+.reviews__row {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  overflow-x: scroll; }

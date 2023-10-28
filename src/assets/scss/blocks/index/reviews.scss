@@ -1,0 +1,37 @@
+.reviews {
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    h2, &__header-right {
+        max-width: calc(50% - 1rem);
+        width: 100%;
+    }
+    &__header-right {
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 2.1rem;
+        }
+    }
+    &__subtitle {
+        margin-bottom: 3rem;
+        font-size: 3.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 111%;
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    &__row {
+        display: flex;
+        width: 100%;
+        gap: 2rem;
+        overflow-x: scroll;
+    }
+}
