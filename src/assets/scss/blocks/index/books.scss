@@ -1,7 +1,7 @@
 .books {
     h2 {
         position: relative;
-        @include line($lightgray);
+        @include line(-3.5rem, $lightgray);
     }
     &__inner {
         padding: 3.5rem 0;
@@ -124,7 +124,7 @@
         border-radius: 0.2rem;
         text-align: center;
         transition: all 0.2s linear;
-        @include line($lightgray);
+        @include line(-3.5rem, $lightgray);
         &:hover {
             background-color: $secondary;
         }

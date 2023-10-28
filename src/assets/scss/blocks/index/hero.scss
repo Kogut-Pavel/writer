@@ -3,7 +3,7 @@
     &__top {
         position: relative;
         margin-bottom: 7rem;
-        @include line($secondary);
+        @include line(-3.5rem, $secondary);
     }
     &__header {
         display: flex;
@@ -32,6 +32,6 @@
     &__bottom {
         position: relative;
         margin-bottom: 3.5rem;
-            @include line($secondary);
+            @include line(-3.5rem, $secondary);
     }
 }

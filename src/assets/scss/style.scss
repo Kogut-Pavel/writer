@@ -49,6 +49,11 @@ section {
     padding-bottom: 10rem;
 }
 
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
 /* Blocks */
 
 // Mini-blocks
@@ -67,3 +72,4 @@ section {
 @import "blocks/index/books";
 @import "blocks/index/news";
 @import "blocks/index/quote";
+@import "blocks/index/blog";
