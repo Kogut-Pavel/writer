@@ -396,19 +396,29 @@ nav ul {
   .title_h4 {
     font-size: 2rem; }
 
-.button_sm {
-  display: inline-block;
-  padding: 0.8rem 1.8rem;
-  font-weight: 500;
+.button {
   line-height: 104%;
   text-transform: uppercase;
-  border-radius: 29px;
-  border: 1px solid #626E13;
-  color: #626E13;
-  transition: all .2s linear; }
-  .button_sm:hover {
+  transition: all 0.2s linear; }
+  .button:hover {
     color: #fff;
     background-color: #626E13; }
+  .button_sm {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    font-weight: 500;
+    border-radius: 29px;
+    border: 1px solid #626E13;
+    color: #626E13; }
+  .button_md {
+    padding: 1.9rem 0;
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background-color: #3D4031;
+    color: #fff;
+    border-radius: 54px;
+    border: none; }
 
 .reviewofwork {
   max-width: 59rem;
@@ -469,6 +479,113 @@ nav ul {
       transform: translateY(-50%);
       width: 2.1rem;
       height: 2.1rem; }
+
+.footer {
+  padding: 7.6rem 0 2rem 0;
+  background-color: #252C09;
+  color: #fff; }
+  .footer__inner {
+    padding-right: 10rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; }
+  .footer .container {
+    position: relative; }
+    .footer .container::after {
+      content: url("../images/decor/stylus.png");
+      position: absolute;
+      right: 3.4rem;
+      bottom: -1rem; }
+  .footer__column {
+    max-width: 28.5rem;
+    width: fit-content; }
+  .footer__logo {
+    margin-bottom: 2.9rem;
+    font-family: 'Russo One', sans-serif;
+    font-size: 3.5rem;
+    line-height: 111%;
+    text-transform: uppercase;
+    color: #fff; }
+  .footer__text {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 104%;
+    text-transform: uppercase; }
+  .footer__form {
+    margin-bottom: 4rem; }
+    .footer__form input[type='email'] {
+      margin-bottom: 1.5rem;
+      padding: 1.5rem 0.8rem;
+      width: 100%;
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 104%;
+      border: none;
+      border-bottom: 1px solid #959595;
+      background: transparent;
+      transition: all 0.2s linear; }
+      .footer__form input[type='email']:focus {
+        border-bottom: 1px solid #626E13; }
+    .footer__form .form__footer {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem; }
+      .footer__form .form__footer label {
+        font-size: 1rem;
+        line-height: 111%;
+        opacity: 0.5; }
+      .footer__form .form__footer input[type='checkbox'] {
+        width: 1.5rem;
+        height: 1.5rem;
+        background: transparent; }
+  .footer .second-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem; }
+  .footer__list {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; }
+    .footer__list-header {
+      font-family: 'Inter', sans-serif;
+      color: #959595; }
+    .footer__list ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem; }
+      .footer__list ul li {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 104%;
+        text-transform: uppercase;
+        transition: all .2s linear; }
+        .footer__list ul li:hover {
+          color: #626E13; }
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; }
+    .footer__contacts .footer__list {
+      gap: 1rem; }
+  .footer__bottom {
+    display: flex;
+    gap: 5rem;
+    font-family: 'Inter', sans-serif;
+    color: #959595;
+    font-size: 1.2rem;
+    line-height: 111%; }
+  .footer__confidence {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem; }
+    .footer__confidence a {
+      letter-spacing: 0.48px; }
 
 .hero {
   padding: 4.1rem 0 10rem 0; }

@@ -1,0 +1,134 @@
+.footer {
+    padding: 7.6rem 0 2rem 0;
+    background-color: $footer-bg-color;
+    color: $white;
+    &__inner {
+        padding-right: 10rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        
+    }
+    .container {
+        position: relative;
+        &::after {
+            content: url('../images/decor/stylus.png');
+            position: absolute;
+            right: 3.4rem;
+            bottom: -1rem;
+        }
+    }
+
+    &__column {
+        max-width: 28.5rem;
+        width: fit-content;
+
+    }
+    &__logo {
+        margin-bottom: 2.9rem;
+        font-family: 'Russo One', sans-serif;
+        font-size: 3.5rem;
+        line-height: 111%;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__text {
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 104%;
+        text-transform: uppercase;
+    }
+    &__form {
+        margin-bottom: 4rem;
+        input[type='email'] {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem 0.8rem;
+            width: 100%;
+            color: $white;
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 104%;
+            border: none;
+            border-bottom: 1px solid $lightgray;
+            background: transparent;
+            transition: all 0.2s linear;
+            &:focus {
+                border-bottom: 1px solid $secondary;
+            }
+        }
+        .form__footer {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            label {
+                font-size: 1rem;
+                line-height: 111%;
+                opacity: 0.5;
+            }
+            input[type='checkbox'] {
+                width: 1.5rem;
+                height: 1.5rem;
+                background: transparent;
+            }
+        }
+    }
+    .second-column {
+        display: flex;
+        flex-direction: column;
+        gap: 4.5rem;
+    }
+    &__list {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        &-header {
+            font-family: 'Inter', sans-serif;
+            color: $lightgray;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            li {
+                font-size: 1.6rem;
+                font-weight: 600;
+                line-height: 104%;
+                text-transform: uppercase;
+                transition: all .2s linear;
+                &:hover {
+                    color: $secondary;
+                }
+            }
+        }
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .footer__list {
+            gap: 1rem;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        gap: 5rem;
+        font-family: 'Inter', sans-serif;
+        color: $lightgray;
+        font-size: 1.2rem;
+        line-height: 111%;
+    }
+    &__confidence {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        a {
+            letter-spacing: 0.48px;
+        }
+    }
+}
