@@ -578,23 +578,31 @@ nav ul li.active {
     color: #fff;
 }
 
-.footer__wrapper {
-    position: relative;
+.footer__inner {
+    padding-right: 10rem;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     gap: 2rem;
 }
 
-.footer__wrapper::after {
+.footer .container {
+    position: relative;
+}
+
+.footer .container::after {
     content: url("../images/decor/stylus.png");
     position: absolute;
     right: 3.4rem;
-    bottom: 1rem;
+    bottom: -1rem;
 }
 
 .footer__column {
     max-width: 28.5rem;
-    width: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
 }
 
 .footer__logo {
@@ -657,10 +665,16 @@ nav ul li.active {
     background: transparent;
 }
 
+.footer .second-column {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 4.5rem;
+}
+
 .footer__list {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: -ms-flexbox;
@@ -688,15 +702,45 @@ nav ul li.active {
     font-weight: 600;
     line-height: 104%;
     text-transform: uppercase;
+    transition: all .2s linear;
+}
+
+.footer__list ul li:hover {
+    color: #626E13;
 }
 
 .footer__contacts {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .footer__contacts .footer__list {
     gap: 1rem;
+}
+
+.footer__bottom {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5rem;
+    font-family: 'Inter', sans-serif;
+    color: #959595;
+    font-size: 1.2rem;
+    line-height: 111%;
+}
+
+.footer__confidence {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.footer__confidence a {
+    letter-spacing: 0.48px;
 }
 
 .hero {

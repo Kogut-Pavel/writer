@@ -1,0 +1,51 @@
+.bookspage {
+    &__descr {
+        max-width: 89.5rem;
+        margin-left: auto;
+        margin-bottom: 4.5rem;
+        text-indent: 30rem;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 104%;
+        text-transform: uppercase;
+    }
+
+    &__inner {
+        display: flex;
+
+        gap: 2.5rem 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 3.5rem;
+    }
+
+    &__pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        line-height: 155.1%; 
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        color: $secondary;
+        li {
+            width: 4.2rem;
+            height: 4.2rem;
+            background: #fff;
+            border-radius: .5rem;
+            border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s linear;
+            &.active {
+                border: 1px solid $secondary;
+            }
+            &:hover {
+                border: 1px solid $secondary;
+            }
+        }
+    }
+}

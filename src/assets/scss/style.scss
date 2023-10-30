@@ -1,7 +1,6 @@
-@import "_vars";
-@import "_mixins";
-@import "./vendor/reset";
-
+@import '_vars';
+@import '_mixins';
+@import './vendor/reset';
 
 // font-family: 'Montserrat', sans-serif;
 // font-family: 'Inter', sans-serif;
@@ -17,7 +16,14 @@ body {
     font-size: 1.4rem;
     line-height: 111%;
     color: $primary;
-    background-color: #EAEBE3;
+    background-color: #eaebe3;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 *,
@@ -57,21 +63,26 @@ img {
 /* Blocks */
 
 // Mini-blocks
-@import "blocks/mini-blocks/nav";
-@import "blocks/mini-blocks/title";
-@import "blocks/mini-blocks/buttons";
-@import "blocks/mini-blocks/reviewofwork";
+@import 'blocks/mini-blocks/nav';
+@import 'blocks/mini-blocks/title';
+@import 'blocks/mini-blocks/buttons';
+@import 'blocks/mini-blocks/reviewofwork';
+@import 'blocks/mini-blocks/breadcrumbs';
+@import 'blocks/mini-blocks/card';
 
 // Common blocks
-@import "blocks/header";
-@import "blocks/footer";
+@import 'blocks/header';
+@import 'blocks/footer';
 
 // Main page
-@import "blocks/index/hero";
-@import "blocks/index/about";
-@import "blocks/index/booklist";
-@import "blocks/index/books";
-@import "blocks/index/news";
-@import "blocks/index/quote";
-@import "blocks/index/blog";
-@import "blocks/index/reviews";
+@import 'blocks/index/hero';
+@import 'blocks/index/about';
+@import 'blocks/index/booklist';
+@import 'blocks/index/books';
+@import 'blocks/index/news';
+@import 'blocks/index/quote';
+@import 'blocks/index/blog';
+@import 'blocks/index/reviews';
+
+// Bookspage
+@import 'blocks/books/bookspage';

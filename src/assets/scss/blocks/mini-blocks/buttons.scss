@@ -2,6 +2,7 @@
     line-height: 104%;
     text-transform: uppercase;
     transition: all 0.2s linear;
+    text-align: center;
     &:hover {
         color: $white;
         background-color: $secondary;
@@ -15,6 +16,7 @@
         color: $secondary;
     }
     &_md {
+        display: block;
         padding: 1.9rem 0;
         width: 100%;
         font-size: 1.6rem;
