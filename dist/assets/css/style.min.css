@@ -1428,3 +1428,23 @@ nav ul {
     max-width: 47.3rem;
     height: auto;
     border-radius: .2rem; }
+
+.otherbooks__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 3.5rem; }
+
+.otherbooks h2, .otherbooks__descr {
+  max-width: calc(50% - 1rem);
+  width: 100%; }
+
+.otherbooks__descr {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 111%;
+  text-transform: uppercase; }
+
+.otherbooks__inner {
+  display: flex;
+  gap: 2rem; }

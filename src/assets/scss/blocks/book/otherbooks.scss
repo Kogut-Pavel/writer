@@ -1,0 +1,23 @@
+.otherbooks {
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-bottom: 3.5rem;
+    }
+    h2,
+    &__descr {
+        max-width: calc(50% - 1rem);
+        width: 100%;
+    }
+    &__descr {
+        font-size: 3.5rem;
+        font-weight: 600;
+        line-height: 111%;
+        text-transform: uppercase;
+    }
+    &__inner {
+        display: flex;
+        gap: 2rem;
+    }
+}
