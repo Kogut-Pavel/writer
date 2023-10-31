@@ -1,0 +1,118 @@
+.book {
+    &__descr {
+        max-width: calc(50% - 1rem);
+        margin-left: auto;
+        margin-bottom: 4.5rem;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 104%;
+        text-transform: uppercase;
+    }
+    &__inner {
+        display: flex;
+        gap: 2rem;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: $lightgray;
+        }
+    }
+    &__cover,
+    &__info {
+        max-width: calc(50% - 1rem);
+        width: 100%;
+    }
+    &__cover,
+    &__info {
+        position: relative;
+        @include line(-1rem, $lightgray);
+    }
+    &__info {
+        h2 {
+            margin-bottom: 0.5rem;
+        }
+    }
+    &__media {
+        display: flex;
+        align-items: center;
+        gap: 2.1rem;
+        margin-bottom: 2rem;
+    }
+    &__genres {
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 104%;
+        text-transform: uppercase;
+        color: $gray;
+    }
+    &__description {
+        margin-bottom: 2rem;
+        span,
+        p {
+            font-family: 'Inter', sans-serif;
+        }
+        span {
+            display: block;
+            margin-bottom: 1rem;
+            color: $lightgray;
+        }
+    }
+    &__specifications {
+        margin-bottom: 2rem;
+        li {
+            padding: 1.9rem 0 1.8rem 0;
+            display: flex;
+            border-bottom: 1px solid $lightgray;
+            &:first-child {
+                border-top: 1px solid $lightgray;
+            }
+        }
+        &-title,
+        &-value {
+            max-width: calc(50% - 1rem);
+            width: 100%;
+        }
+        &-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 104%;
+            text-transform: uppercase;
+            color: $gray;
+        }
+        &-value {
+            font-family: 'Inter', sans-serif;
+            color: $secondary;
+            a {
+                color: $lightgray;
+                transition: all 0.2s linear;
+                &:hover {
+                    color: $gray;
+                }
+            }
+        }
+    }
+    &__miniimages {
+        display: flex;
+        gap: 2rem;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: $lightgray;
+        }
+        img {
+            max-width: calc(50% - 1rem);
+            width: 100%;
+        }
+    }
+}

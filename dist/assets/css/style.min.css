@@ -1295,3 +1295,109 @@ nav ul {
       border: 1px solid #626E13; }
     .bookspage__pagination li:hover {
       border: 1px solid #626E13; }
+
+.book__descr {
+  max-width: calc(50% - 1rem);
+  margin-left: auto;
+  margin-bottom: 4.5rem;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 104%;
+  text-transform: uppercase; }
+
+.book__inner {
+  display: flex;
+  gap: 2rem;
+  position: relative; }
+  .book__inner::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #959595; }
+
+.book__cover, .book__info {
+  max-width: calc(50% - 1rem);
+  width: 100%; }
+
+.book__cover, .book__info {
+  position: relative; }
+  .book__cover::after, .book__info::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #959595; }
+
+.book__info h2 {
+  margin-bottom: 0.5rem; }
+
+.book__media {
+  display: flex;
+  align-items: center;
+  gap: 2.1rem;
+  margin-bottom: 2rem; }
+
+.book__genres {
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 104%;
+  text-transform: uppercase;
+  color: #534F4F; }
+
+.book__description {
+  margin-bottom: 2rem; }
+  .book__description span,
+  .book__description p {
+    font-family: 'Inter', sans-serif; }
+  .book__description span {
+    display: block;
+    margin-bottom: 1rem;
+    color: #959595; }
+
+.book__specifications {
+  margin-bottom: 2rem; }
+  .book__specifications li {
+    padding: 1.9rem 0 1.8rem 0;
+    display: flex;
+    border-bottom: 1px solid #959595; }
+    .book__specifications li:first-child {
+      border-top: 1px solid #959595; }
+  .book__specifications-title, .book__specifications-value {
+    max-width: calc(50% - 1rem);
+    width: 100%; }
+  .book__specifications-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 104%;
+    text-transform: uppercase;
+    color: #534F4F; }
+  .book__specifications-value {
+    font-family: 'Inter', sans-serif;
+    color: #626E13; }
+    .book__specifications-value a {
+      color: #959595;
+      transition: all 0.2s linear; }
+      .book__specifications-value a:hover {
+        color: #534F4F; }
+
+.book__miniimages {
+  display: flex;
+  gap: 2rem;
+  position: relative; }
+  .book__miniimages::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #959595; }
+  .book__miniimages img {
+    max-width: calc(50% - 1rem);
+    width: 100%; }
