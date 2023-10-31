@@ -1,0 +1,34 @@
+.quote.book {
+    position: relative;
+    .quote__inner {
+        padding-top: 0;
+    }
+    h2 {
+        top: 5rem;
+    }
+    blockquote {
+        margin-bottom: 0;
+        max-width: 100%;
+        font-size: 9rem;
+        font-weight: 600;
+        line-height: 104%;
+        text-transform: uppercase;
+        span {
+            max-width: 90rem;
+            display: block;
+            margin-left: auto;
+        }
+        &::before {
+            content: none;
+        }
+    }
+    img {
+        position: absolute;
+        top: 41%;
+        right: 0;
+        
+        max-width: 47.3rem;
+        height: auto;
+        border-radius: .2rem;
+    }
+}

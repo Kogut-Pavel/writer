@@ -1401,3 +1401,30 @@ nav ul {
   .book__miniimages img {
     max-width: calc(50% - 1rem);
     width: 100%; }
+
+.quote.book {
+  position: relative; }
+  .quote.book .quote__inner {
+    padding-top: 0; }
+  .quote.book h2 {
+    top: 5rem; }
+  .quote.book blockquote {
+    margin-bottom: 0;
+    max-width: 100%;
+    font-size: 9rem;
+    font-weight: 600;
+    line-height: 104%;
+    text-transform: uppercase; }
+    .quote.book blockquote span {
+      max-width: 90rem;
+      display: block;
+      margin-left: auto; }
+    .quote.book blockquote::before {
+      content: none; }
+  .quote.book img {
+    position: absolute;
+    top: 41%;
+    right: 0;
+    max-width: 47.3rem;
+    height: auto;
+    border-radius: .2rem; }
