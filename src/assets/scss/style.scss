@@ -51,6 +51,15 @@ a {
     color: $secondary;
 }
 
+.section-description {
+    margin-bottom: 3.5rem;
+    text-indent: 50%;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 104%;
+    text-transform: uppercase;
+}
+
 section {
     padding-bottom: 10rem;
 }
@@ -95,3 +104,6 @@ img {
 
 // Biography page
 @import 'blocks/biography/biography';
+
+// Contacts page
+@import 'blocks/contacts/contacts';
