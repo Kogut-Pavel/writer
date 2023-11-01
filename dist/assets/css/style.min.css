@@ -1582,3 +1582,155 @@ nav ul {
     width: 100%;
     height: 0.1rem;
     background-color: #959595; }
+
+.contacts__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem; }
+
+.contacts__row {
+  display: flex;
+  gap: 2rem; }
+  .contacts__row > * {
+    max-width: calc(50% - 1rem);
+    width: 100%; }
+  .contacts__row img {
+    border-radius: 0.2rem; }
+
+.contacts__row.middle {
+  position: relative; }
+  .contacts__row.middle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(50% - 1rem);
+    height: 0.1rem;
+    background-color: #959595; }
+
+.contacts__block:first-child {
+  display: flex;
+  gap: 2rem; }
+
+.contacts__block p {
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 2rem;
+  color: #2b3503; }
+
+.contacts__block ul {
+  display: flex;
+  gap: 2.1rem; }
+
+.contacts__phone, .contacts__email {
+  max-width: calc(50% - 1rem);
+  width: 100%; }
+  .contacts__phone h2, .contacts__email h2 {
+    margin-bottom: 1rem; }
+  .contacts__phone a, .contacts__email a {
+    color: #2b3503;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 104%;
+    text-transform: uppercase; }
+
+.contacts__social {
+  position: relative;
+  margin-top: auto;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 104%;
+  text-transform: uppercase; }
+  .contacts__social::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #959595; }
+  .contacts__social .vk,
+  .contacts__social .tg-channel,
+  .contacts__social .tg-chat,
+  .contacts__social .dzen,
+  .contacts__social .youtube {
+    transition: all 0.2s linear; }
+  .contacts__social .vk {
+    color: #5a7a90; }
+    .contacts__social .vk:hover {
+      color: #84a0b2; }
+  .contacts__social .tg-channel {
+    color: #0d5587; }
+    .contacts__social .tg-channel:hover {
+      color: #1481cd; }
+  .contacts__social .tg-chat {
+    color: #626e13; }
+    .contacts__social .tg-chat:hover {
+      color: #9caf1e; }
+  .contacts__social .dzen {
+    color: #000; }
+    .contacts__social .dzen:hover {
+      color: #262626; }
+  .contacts__social .youtube {
+    color: #ab0d0d; }
+    .contacts__social .youtube:hover {
+      color: #ed1717; }
+
+.contacts__form p {
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 2rem;
+  color: #2b3503;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 104%;
+  text-transform: uppercase; }
+
+.contacts__form .form {
+  display: flex;
+  gap: 1rem 2rem;
+  flex-wrap: wrap; }
+  .contacts__form .form__block {
+    max-width: calc(50% - 1rem);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; }
+  .contacts__form .form input,
+  .contacts__form .form textarea {
+    font-family: 'Inter', sans-serif;
+    padding: 1.6rem 0.8rem 1.5rem 0.8rem;
+    border-radius: 0.2rem;
+    border: 1px solid #959595;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 104%;
+    text-transform: uppercase;
+    color: #2b3503;
+    background: transparent;
+    transition: all 0.2s linear; }
+    .contacts__form .form input:focus,
+    .contacts__form .form textarea:focus {
+      border: 1px solid #626E13; }
+    .contacts__form .form input::placeholder,
+    .contacts__form .form textarea::placeholder {
+      color: #959595; }
+  .contacts__form .form textarea {
+    resize: none;
+    height: 100%; }
+  .contacts__form .form button {
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 104%;
+    text-transform: uppercase;
+    color: #fff;
+    background: #3D4031;
+    border-radius: 0.2rem;
+    border: 0;
+    padding: 1.9rem 0;
+    transition: all 0.2s linear; }
+    .contacts__form .form button:hover {
+      background: #626E13; }

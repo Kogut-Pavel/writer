@@ -1,0 +1,178 @@
+.contacts {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+    }
+    &__row {
+        display: flex;
+        gap: 2rem;
+        > * {
+            max-width: calc(50% - 1rem);
+            width: 100%;
+        }
+        img {
+            border-radius: 0.2rem;
+        }
+    }
+    &__row.middle {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(50% - 1rem);
+            height: 0.1rem;
+            background-color: $lightgray;
+        }
+    }
+    &__block {
+        &:first-child {
+            display: flex;
+            gap: 2rem;
+        }
+        p {
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 2rem;
+            color: #2b3503;
+        }
+        ul {
+            display: flex;
+            gap: 2.1rem;
+        }
+    }
+    &__phone,
+    &__email {
+        max-width: calc(50% - 1rem);
+        width: 100%;
+        h2 {
+            margin-bottom: 1rem;
+        }
+        a {
+            color: #2b3503;
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 104%;
+            text-transform: uppercase;
+        }
+    }
+
+    &__social {
+        position: relative;
+        margin-top: auto;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 104%;
+        text-transform: uppercase;
+        @include line(0, $lightgray);
+        .vk,
+        .tg-channel,
+        .tg-chat,
+        .dzen,
+        .youtube {
+            transition: all 0.2s linear;
+        }
+        .vk {
+            color: #5a7a90;
+            &:hover {
+                color: lighten(#5a7a90, 15);
+            }
+        }
+        .tg-channel {
+            color: #0d5587;
+            &:hover {
+                color: lighten(#0d5587, 15);
+            }
+        }
+        .tg-chat {
+            color: #626e13;
+            &:hover {
+                color: lighten(#626e13, 15);
+            }
+        }
+        .dzen {
+            color: #000;
+            &:hover {
+                color: lighten(#000, 15);
+            }
+        }
+        .youtube {
+            color: #ab0d0d;
+            &:hover {
+                color: lighten(#ab0d0d, 15);
+            }
+        }
+    }
+
+    &__form {
+        p {
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 2rem;
+            color: #2b3503;
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 104%;
+            text-transform: uppercase;
+        }
+
+        .form {
+            display: flex;
+            gap: 1rem 2rem;
+            flex-wrap: wrap;
+
+            &__block {
+                max-width: calc(50% - 1rem);
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            input,
+            textarea {
+                font-family: 'Inter', sans-serif;
+                padding: 1.6rem 0.8rem 1.5rem 0.8rem;
+                border-radius: 0.2rem;
+                border: 1px solid $lightgray;
+                font-size: 1.6rem;
+                font-weight: 600;
+                line-height: 104%;
+                text-transform: uppercase;
+                color: #2b3503;
+                background: transparent;
+                transition: all 0.2s linear;
+                &:focus {
+                    border: 1px solid $secondary;
+                }
+                &::placeholder {
+                    color: $lightgray;
+                }
+            }
+            textarea {
+                resize: none;
+                height: 100%;
+            }
+
+            button {
+                width: 100%;
+                font-size: 1.6rem;
+                font-weight: 600;
+                line-height: 104%;
+                text-transform: uppercase;
+                color: $white;
+                background: $darkgray;
+                border-radius: 0.2rem;
+                border: 0;
+                padding: 1.9rem 0;
+                transition: all 0.2s linear;
+                &:hover {
+                    background: $secondary;
+                }
+            }
+        }
+    }
+}
