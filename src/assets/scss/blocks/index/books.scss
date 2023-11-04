@@ -7,8 +7,7 @@
     &__inner {
         padding: 3.5rem 0;
         display: flex;
-        // justify-content: space-between;
-
+        position: relative;
         gap: 2rem;
     }
     &__text-block {
@@ -32,61 +31,101 @@
     }
 
     &__somebooks {
-        ul {
-            display: flex;
-            gap: 1rem;
-            flex-direction: column;
+        display: flex;
+        gap: 1rem;
+    }
+
+    ul {
+        position: absolute;
+        height: 472px;
+        top: 3.5rem;
+        right: 0;
+        display: flex;
+        gap: 1rem;
+    }
+    li {
+        height: 100%;
+        /*что бы слайды стали горизонтальные*/
+        float: left;
+        &.active {
+            .books__spine {
+                background: $secondary;
+                color: $white;
+            }
+        }
+    }
+    .trigger {
+        height: 100%;
+        width: 64px;
+        position: relative;
+        float: left;
+        cursor: pointer;
+    }
+
+    .content {
+        float: left;
+        /*вся магия в том что убираем ширину 
+    блока с контентом, а при клике js 
+    добавляет 530 px*/
+        width: 0;
+        height: 100%;
+        /*обрезает всё что уходит за рамки контейнера*/
+        overflow: hidden;
+    }
+
+    &__spine {
+        position: relative;
+        float: left;
+        background-color: #eee;
+        height: 100%;
+        max-width: 6.4rem;
+        width: 100%;
+        cursor: pointer;
+        transition: all 0.2s linear;
+        border: 1px solid $secondary;
+        h3,
+        .books__genres {
+            position: absolute;
             transform: rotate(-90deg);
-            width: 472px;
-            height: 100%;
-            li {
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0rem 1.5rem 0rem 0.7rem;
-                height: 6.3rem;
-                border: 1px solid $secondary;
-                cursor: pointer;
-                .genres {
-                    font-family: 'Inter', sans-serif;
-                    max-width: 14.5rem;
-                }
-                h3 {
-                    position: absolute;
-                    top: 50%;
-                    right: 1.5rem;
-                    transform: translateY(-50%);
-                    max-width: 32.5rem;
-                    margin-bottom: 0;
-                    text-align: right;
-                }
-                &.active {
-                    background-color: $secondary;
-                    color: $white;
-                }
+            margin-bottom: 0;
+        }
+        h3 {
+            top: 15rem;
+            right: -12.3rem;
+            width: 31rem;
+            text-align: right;
+        }
+        .books__genres {
+            font-family: 'Inter', sans-serif;
+            bottom: 7.3rem;
+            left: -80%;
+            width: 16rem;
+        }
+        &:hover {
+            background: $secondary;
+            color: $white;
+        }
+        &.item-3 {
+            h3 {
+                top: 13.5rem;
+            }
+            .books__genres {
+                bottom: 6.6rem;
             }
         }
     }
 
-    &__book {
-        position: absolute;
-        top: -20px;
-        left: 85.5px;
-        width: 29.9rem;
-        height: 47.2rem;
-        padding: 1rem 1rem 1rem 2rem;
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        transform: rotate(90deg);
-        &.active {
-            display: flex;
-        }
+    &__cover {
+        padding: 1rem;
+        padding-left: 2rem;
+        width: 0;
+        height: 100%;
+        position: relative;
         img {
             position: absolute;
             top: 0;
-            left: 3px;
+            left: 0;
+            width: 29.4rem;
             z-index: -1;
         }
         h4 {
@@ -94,12 +133,20 @@
             margin-bottom: 1rem;
         }
         .description-top {
+            width: 26.4rem;
             font-weight: 500;
             line-height: 104%;
             text-transform: uppercase;
             color: $darkgray;
         }
+        &-footer {
+            position: absolute;
+            bottom: 1rem;
+            left: 2rem;
+            width: 26.4rem;
+        }
         .description-bottom {
+            width: 26.4rem;
             margin-bottom: 0.6rem;
             font-family: 'Inter', sans-serif;
             color: $white;
