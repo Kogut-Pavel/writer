@@ -5,7 +5,8 @@
         gap: 2rem;
         margin-bottom: 3rem;
     }
-    h2, &__header-right {
+    h2,
+    &__header-right {
         max-width: calc(50% - 1rem);
         width: 100%;
     }
@@ -26,12 +27,24 @@
     &__inner {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
     }
     &__row {
         display: flex;
         width: 100%;
         gap: 2rem;
-        overflow-x: scroll;
+    }
+    .row1 {
+        .owl-stage {
+            width: fit-content;
+            .owl-item {
+                width: 59rem !important;
+            }
+        }
+    }
+    .row2 {
+        .reviewofwork {
+            flex-direction: row-reverse;
+            text-align: left;
+        }
     }
 }

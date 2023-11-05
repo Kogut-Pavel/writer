@@ -1277,14 +1277,21 @@ nav ul {
 
 .reviews__inner {
   display: flex;
-  flex-direction: column;
-  gap: 2rem; }
+  flex-direction: column; }
 
 .reviews__row {
   display: flex;
   width: 100%;
-  gap: 2rem;
-  overflow-x: scroll; }
+  gap: 2rem; }
+
+.reviews .row1 .owl-stage {
+  width: fit-content; }
+  .reviews .row1 .owl-stage .owl-item {
+    width: 59rem !important; }
+
+.reviews .row2 .reviewofwork {
+  flex-direction: row-reverse;
+  text-align: left; }
 
 .bookspage__descr {
   max-width: 89.5rem;

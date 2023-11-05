@@ -1100,6 +1100,7 @@ nav ul li.active {
     padding: 3.5rem 0;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
     gap: 2rem;
 }
 
@@ -1128,6 +1129,46 @@ nav ul li.active {
     display: -ms-flexbox;
     display: flex;
     gap: 1rem;
+}
+
+.books ul {
+    position: absolute;
+    height: 472px;
+    top: 3.5rem;
+    right: 0;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+}
+
+.books li {
+    height: 100%;
+    /*что бы слайды стали горизонтальные*/
+    float: left;
+}
+
+.books li.active .books__spine {
+    background: #626E13;
+    color: #fff;
+}
+
+.books .trigger {
+    height: 100%;
+    width: 64px;
+    position: relative;
+    float: left;
+    cursor: pointer;
+}
+
+.books .content {
+    float: left;
+    /*вся магия в том что убираем ширину 
+    блока с контентом, а при клике js 
+    добавляет 530 px*/
+    width: 0;
+    height: 100%;
+    /*обрезает всё что уходит за рамки контейнера*/
+    overflow: hidden;
 }
 
 .books__spine {
@@ -1169,29 +1210,20 @@ nav ul li.active {
     color: #fff;
 }
 
-.books .item-3 h3 {
-    top: 13.3rem;
+.books__spine.item-3 h3 {
+    top: 13.5rem;
 }
 
-.books .item-3 .books__genres {
+.books__spine.item-3 .books__genres {
     bottom: 6.6rem;
 }
 
 .books__cover {
     padding: 1rem;
     padding-left: 2rem;
-    max-width: 100%;
     width: 0;
-    display: none;
+    height: 100%;
     position: relative;
-    opacity: 0;
-}
-
-.books__cover.active {
-    display: block;
-    opacity: 1;
-    max-width: 29.4rem;
-    width: 100%;
 }
 
 .books__cover img {
@@ -1234,19 +1266,6 @@ nav ul li.active {
     font-family: 'Inter', sans-serif;
     color: #959595;
     text-align: right;
-}
-
-.books .anim {
-    transition: all 0.2s linear;
-    display: block;
-    opacity: 1;
-    width: 29.4rem;
-    background: #626E13;
-    color: #fff;
-}
-
-.books .anim > * {
-    opacity: 1;
 }
 
 .books__button {
@@ -1718,7 +1737,6 @@ nav ul li.active {
     display: flex;
     width: 100%;
     gap: 2rem;
-    overflow-x: scroll;
 }
 
 .bookspage__descr {
@@ -2414,232 +2432,4 @@ nav ul li.active {
 
 .contacts__form .form button:hover {
     background: #626E13;
-}
-
-.test {
-    margin-bottom: 3.6rem;
-}
-
-.test h2 {
-    position: relative;
-}
-
-.test h2::after {
-    content: '';
-    position: absolute;
-    bottom: -3.5rem;
-    left: 0;
-    width: 100%;
-    height: 0.1rem;
-    background-color: #959595;
-}
-
-.test__inner {
-    padding: 3.5rem 0;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    gap: 2rem;
-}
-
-.test__text-block {
-    padding: 3.5rem;
-    background-color: #3D4031;
-    color: #fff;
-}
-
-.test__text-block p,
-    .test__text-block .author-info {
-    font-family: 'Inter', sans-serif;
-}
-
-.test__text-block p {
-    margin-bottom: 2rem;
-}
-
-.test__text-block, .test__somebooks {
-    max-width: calc(50% - 1rem);
-    width: 100%;
-    height: 47.2rem;
-}
-
-.test__somebooks {
-    display: -ms-flexbox;
-    display: flex;
-    gap: 1rem;
-}
-
-.test ul {
-    position: absolute;
-    height: 472px;
-    top: 3.5rem;
-    right: 0;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 1rem;
-}
-
-.test li {
-    height: 100%;
-    /*что бы слайды стали горизонтальные*/
-    float: left;
-}
-
-.test .trigger {
-    height: 100%;
-    width: 64px;
-    position: relative;
-    float: left;
-    cursor: pointer;
-}
-
-.test .content {
-    float: left;
-    /*вся магия в том что убираем ширину 
-    блока с контентом, а при клике js 
-    добавляет 530 px*/
-    width: 0;
-    /*обрезает всё что уходит за рамки контейнера*/
-    overflow: hidden;
-}
-
-.test .content p, .test .content h3 {
-    width: 250px;
-    color: #fff;
-    padding: 15px;
-}
-
-.test__spine {
-    position: relative;
-    float: left;
-    background-color: #eee;
-    height: 100%;
-    max-width: 6.4rem;
-    width: 100%;
-    cursor: pointer;
-    transition: all 0.2s linear;
-    border: 1px solid #626E13;
-}
-
-.test__spine h3,
-    .test__spine .test__genres {
-    position: absolute;
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    margin-bottom: 0;
-}
-
-.test__spine h3 {
-    top: 15rem;
-    right: -12.3rem;
-    width: 31rem;
-    text-align: right;
-}
-
-.test__spine .test__genres {
-    font-family: 'Inter', sans-serif;
-    bottom: 7.3rem;
-    left: -80%;
-    width: 16rem;
-}
-
-.test__spine:hover {
-    background: #626E13;
-    color: #fff;
-}
-
-.test__cover {
-    padding: 1rem;
-    padding-left: 2rem;
-    max-width: 100%;
-    width: 0;
-    height: 100%;
-    position: relative;
-}
-
-.test__cover img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 29.4rem;
-    z-index: -1;
-}
-
-.test__cover h4 {
-    color: #3D4031;
-    margin-bottom: 1rem;
-}
-
-.test__cover .description-top {
-    width: 26.4rem;
-    font-weight: 500;
-    line-height: 104%;
-    text-transform: uppercase;
-    color: #3D4031;
-}
-
-.test__cover-footer {
-    position: absolute;
-    bottom: 1rem;
-    left: 2rem;
-    width: 26.4rem;
-}
-
-.test__cover .description-bottom {
-    width: 26.4rem;
-    margin-bottom: 0.6rem;
-    font-family: 'Inter', sans-serif;
-    color: #fff;
-}
-
-.test__cover .read-more {
-    display: block;
-    font-family: 'Inter', sans-serif;
-    color: #959595;
-    text-align: right;
-}
-
-.test__button {
-    position: relative;
-    display: block;
-    padding: 2rem;
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 104%;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: #534F4F;
-    border-radius: 0.2rem;
-    text-align: center;
-    transition: all 0.2s linear;
-}
-
-.test__button::after {
-    content: '';
-    position: absolute;
-    bottom: -3.5rem;
-    left: 0;
-    width: 100%;
-    height: 0.1rem;
-    background-color: #959595;
-}
-
-.test__button:hover {
-    background-color: #626E13;
-}
-
-.test__button span {
-    position: relative;
-    padding-right: 2rem;
-}
-
-.test__button span::after {
-    content: url("../images/icons/arrow-down-right.svg");
-    position: absolute;
-    top: 0;
-    right: -0.5rem;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 1.6rem;
 }

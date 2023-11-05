@@ -14,7 +14,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     cutLength(cardTitles, 24);
     cutLength(cardGenres, 37);
-1
+
+    // Горизонтальный аккордеон
 
     $(function () {
         //обрабатываем клик по блоку с классом trigger
@@ -59,6 +60,39 @@ window.addEventListener('DOMContentLoaded', () => {
         });
         $('.item-4').click();
     });
-    
-    
+
+    // Слайдеры
+
+    $('.owl-carousel.row1').owlCarousel({
+        items: 2,
+        margin: 20,
+        loop: true,
+        center: true,
+        lazyLoad: true,
+        stagePadding: 50,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplayTimeout: 6000,
+    });
+    $('.owl-carousel.row2').owlCarousel({
+        items: 2,
+        margin: 20,
+        loop: true,
+        lazyLoad: true,
+        stagePadding: 160,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplayTimeout: 7000,
+        rtl: true,
+    });
+    $('.owl-carousel.row3').owlCarousel({
+        items: 2,
+        margin: 20,
+        loop: true,
+        center: true,
+        lazyLoad: true,
+        stagePadding: 160,
+        autoplay: true,
+        autoplayHoverPause: true,
+    });
 });
