@@ -20,6 +20,9 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    &.mobile-menu-active {
+        overflow: hidden;
+    }
 }
 
 main {
@@ -78,10 +81,12 @@ img {
 @import 'blocks/mini-blocks/reviewofwork';
 @import 'blocks/mini-blocks/breadcrumbs';
 @import 'blocks/mini-blocks/card';
+@import 'blocks/mini-blocks/adaptive';
 
 // Common blocks
 @import 'blocks/header';
 @import 'blocks/footer';
+@import 'blocks/adaptive';
 
 // Main page
 @import 'blocks/index/hero';
@@ -92,6 +97,7 @@ img {
 @import 'blocks/index/quote';
 @import 'blocks/index/blog';
 @import 'blocks/index/reviews';
+@import 'blocks/index/adaptive';
 
 // Books page
 @import 'blocks/books/bookspage';

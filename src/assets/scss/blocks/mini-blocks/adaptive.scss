@@ -1,0 +1,15 @@
+@media (max-width: 992px) {
+    nav {
+        ul {
+            gap: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    nav {
+        display: none;
+    }
+
+}

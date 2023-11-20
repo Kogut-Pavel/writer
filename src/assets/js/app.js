@@ -1,4 +1,17 @@
 window.addEventListener('DOMContentLoaded', () => {
+
+
+    // Мобильное меню
+
+    let menuBtn = document.querySelector('.menu-btn');
+    let menu = document.querySelector('.menu');
+    menuBtn.addEventListener('click', function(){
+        menuBtn.classList.toggle('active');
+        menu.classList.toggle('active');
+        document.body.classList.toggle('mobile-menu-active');
+        window.scrollBy(0, -85);
+    })
+
     // Находим заголовки карточек и обрезаем если слишком длинное название
     const cardTitles = document.querySelectorAll('.card__title');
     const cardGenres = document.querySelectorAll('.card__genres');
