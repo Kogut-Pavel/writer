@@ -1729,7 +1729,6 @@ nav ul li.active {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 2rem;
 }
 
 .reviews__row {
@@ -1737,6 +1736,22 @@ nav ul li.active {
     display: flex;
     width: 100%;
     gap: 2rem;
+}
+
+.reviews .row1 .owl-stage {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.reviews .row1 .owl-stage .owl-item {
+    width: 59rem !important;
+}
+
+.reviews .row2 .reviewofwork {
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    text-align: left;
 }
 
 .bookspage__descr {

@@ -95,4 +95,24 @@ window.addEventListener('DOMContentLoaded', () => {
         autoplay: true,
         autoplayHoverPause: true,
     });
+    $('.owl-carousel.book-reviews').owlCarousel({
+        items: 2,
+        margin: 20,
+        loop: true,
+        lazyLoad: true,
+        stagePadding: 160,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplayTimeout: 7000,
+    });
+    $('.owl-carousel.book-reviews2').owlCarousel({
+        items: 2,
+        margin: 20,
+        loop: true,
+        center: true,
+        lazyLoad: true,
+        stagePadding: 160,
+        autoplay: true,
+        autoplayHoverPause: true,
+    });
 });
