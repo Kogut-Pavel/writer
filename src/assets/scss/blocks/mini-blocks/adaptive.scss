@@ -1,7 +1,22 @@
+@media (max-width: 1200px) {
+    .title {
+        &_h1 {
+            font-size: 10.8rem;
+        }
+    }
+}
+
 @media (max-width: 992px) {
     nav {
         ul {
             gap: 1.5rem;
+        }
+    }
+
+    .title {
+        
+        &_h1 {
+            font-size: 8rem;
         }
     }
 }
@@ -12,4 +27,26 @@
         display: none;
     }
 
+    .title {
+        &_h1 {
+            font-size: 5.7rem;
+        }
+    }
+
+}
+
+@media (max-width: 576px) {
+    .title {
+        &_h1 {
+            font-size: 4.6rem;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .title {
+        &_h1 {
+            font-size: 3.4rem;
+        }
+    }
 }
