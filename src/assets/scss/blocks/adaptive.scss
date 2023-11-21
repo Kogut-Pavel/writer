@@ -1,4 +1,19 @@
+@media (max-width: 992px) {
+    section {
+        padding-bottom: 8rem;
+    }
+    .section-description {
+        margin-bottom: 3rem;
+        font-size: 2rem;
+    }
+}
+
 @media (max-width: 767px) {
+    .section-description {
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+    }
+
     .header {
         &__phone {
             display: none;
@@ -84,5 +99,14 @@
 
     .footer {
         
+    }
+}
+
+@media (max-width: 576px) {
+    .section-description {
+        margin-bottom: 1.5rem;
+    }
+    section {
+        padding-bottom: 7rem;
     }
 }

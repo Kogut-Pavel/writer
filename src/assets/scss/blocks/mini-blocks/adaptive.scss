@@ -14,9 +14,12 @@
     }
 
     .title {
-        
+        margin-bottom: 3rem;
         &_h1 {
             font-size: 8rem;
+        }
+        &_h2 {
+            font-size: 2rem;
         }
     }
 }
@@ -28,8 +31,12 @@
     }
 
     .title {
+        margin-bottom: 2rem;
         &_h1 {
             font-size: 5.7rem;
+        }
+        &_h2 {
+            font-size: 1.6rem;
         }
     }
 
