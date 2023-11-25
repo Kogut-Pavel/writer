@@ -1312,7 +1312,7 @@ nav ul {
   gap: 1rem 2rem; }
 
 .blog__block {
-  max-width: 28.5rem;
+  max-width: calc(50% - 1rem);
   width: 100%; }
   .blog__block.block-2 {
     display: flex;
@@ -1327,6 +1327,9 @@ nav ul {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem; }
+
+.blog__right .blog__block {
+  max-width: 100%; }
 
 .blog__right .blog__subtitle {
   margin-bottom: 4rem;
@@ -1348,6 +1351,9 @@ nav ul {
 .blog__right-down {
   display: flex;
   gap: 2rem; }
+
+.blog__right-right, .blog-right-left {
+  max-width: calc(50% - 1rem); }
 
 .blog__right-left {
   display: flex;
@@ -1382,6 +1388,10 @@ nav ul {
     transition: all 0.2s linear; }
     .blog .blog__block.news .read-more:hover {
       color: #3D4031; }
+
+.blog .mobile,
+.blog .mobile-sm {
+  display: none; }
 
 .reviews__header {
   display: flex;
@@ -1448,7 +1458,41 @@ nav ul {
     padding: 0 2rem;
     gap: 1.5rem; }
   .quote h2 {
-    font-size: 13.5rem; } }
+    font-size: 13.5rem; }
+  .blog .not-mobile {
+    display: none; }
+  .blog .mobile {
+    display: block; }
+  .blog__left {
+    justify-content: space-between; }
+    .blog__left .blog__block {
+      max-width: 100%; }
+  .blog__left-down {
+    gap: 2rem; }
+  .blog__right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; }
+    .blog__right .blog__subtitle {
+      margin-bottom: 2rem;
+      font-size: 3rem; }
+  .blog__links {
+    flex-direction: row; }
+  .blog__right-down {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 2rem;
+    height: 100%; }
+  .blog__right-left {
+    justify-content: end; }
+  .blog__right-right {
+    max-width: 100%;
+    justify-content: space-between;
+    gap: 1.5rem; }
+  .blog .top {
+    margin-bottom: 1rem; }
+    .blog .top p {
+      margin-bottom: 1.5rem; } }
 
 @media (max-width: 992px) {
   .hero {
@@ -1534,7 +1578,24 @@ nav ul {
       top: -2rem;
       left: -6rem; }
   .quote p {
-    margin-right: 0; } }
+    margin-right: 0; }
+  .blog h2 {
+    margin-bottom: -2rem; }
+  .blog__left .big-img {
+    padding-top: 8.5rem; }
+  .blog__right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; }
+    .blog__right .blog__subtitle {
+      margin-bottom: 2rem;
+      font-size: 2rem; }
+  .blog__left-down, .blog__right-down {
+    gap: 1.5rem; }
+  .blog__right-right {
+    gap: 1rem; }
+  .blog .top p {
+    margin-bottom: 4.5rem; } }
 
 @media (max-width: 767px) {
   .hero__title {
@@ -1601,7 +1662,32 @@ nav ul {
     .quote blockquote::before {
       content: url("../images/icons/wing-sm.png");
       top: -0.5rem;
-      left: -3rem; } }
+      left: -3rem; }
+  .blog__inner {
+    gap: 1rem; }
+  .blog__left, .blog__right {
+    max-width: calc(50% - 0.5rem); }
+  .blog__left::after {
+    right: -0.5rem; }
+  .blog__right .blog__subtitle {
+    margin-bottom: 1rem;
+    font-size: 1.8rem; }
+    .blog__right .blog__subtitle::after {
+      bottom: -1.5rem; }
+  .blog__links {
+    flex-direction: column; }
+  .blog__block p {
+    font-size: 1.2rem; }
+  .blog .big-img {
+    padding-top: 5.5rem; }
+  .blog .top p {
+    margin-bottom: 3rem;
+    line-height: 111%; }
+  .blog .blog__block.news p {
+    line-height: 111%;
+    margin-bottom: 0.5rem; }
+  .blog .blog__block.news .read-more {
+    font-size: 1.2rem; } }
 
 @media (max-width: 630px) {
   .books ul {
@@ -1695,7 +1781,42 @@ nav ul {
     font-size: 5.6rem; }
   .quote blockquote {
     max-width: 32rem;
-    margin-bottom: 3rem; } }
+    margin-bottom: 3rem; }
+  .blog h2 {
+    margin: 0;
+    margin-bottom: 2.5rem; }
+  .blog__inner {
+    flex-direction: column; }
+    .blog__inner::after {
+      content: none; }
+  .blog__left {
+    max-width: 100%;
+    flex-direction: column-reverse; }
+    .blog__left::after {
+      content: none; }
+    .blog__left .blog__subtitle {
+      font-size: 2.5rem; }
+  .blog__right {
+    max-width: 100%; }
+  .blog__left-down, .blog__right-left {
+    gap: 0; }
+    .blog__left-down picture, .blog__right-left picture {
+      display: none; }
+  .blog__right-down {
+    gap: 0; }
+  .blog .big-img {
+    padding: 0; }
+  .blog .top {
+    margin-bottom: 0.5rem; }
+    .blog .top p {
+      margin-bottom: 1.5rem;
+      font-size: 1.4rem; }
+  .blog .mobile-sm {
+    display: flex;
+    gap: 0.5rem; }
+    .blog .mobile-sm img {
+      max-width: calc(50% - 0.25rem);
+      height: auto; } }
 
 @media (max-width: 425px) {
   .hero__title {
@@ -1727,7 +1848,9 @@ nav ul {
   .quote p {
     max-width: 14rem;
     font-size: 1.2rem;
-    line-height: 111%; } }
+    line-height: 111%; }
+  .blog__left .blog__subtitle {
+    font-size: 2rem; } }
 
 .bookspage__descr {
   max-width: 89.5rem;

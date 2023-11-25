@@ -49,6 +49,56 @@
             font-size: 13.5rem;
         }
     }
+
+    .blog {
+        .not-mobile {
+            display: none;
+        }
+        .mobile {
+            display: block;
+        }
+        &__left {
+            justify-content: space-between;
+            .blog__block {
+                max-width: 100%;
+            }
+        }
+        &__left-down {
+            gap: 2rem;
+        }
+        &__right {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .blog__subtitle {
+                margin-bottom: 2rem;
+                font-size: 3rem;
+            }
+        }
+        &__links {
+            flex-direction: row;
+        }
+        &__right-down {
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            gap: 2rem;
+            height: 100%;
+        }
+        &__right-left {
+            justify-content: end;
+        }
+        &__right-right {
+            max-width: 100%;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+        .top {
+            margin-bottom: 1rem;
+            p {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -191,6 +241,38 @@
             margin-right: 0;
         }
     }
+
+    .blog {
+        h2 {
+            margin-bottom: -2rem;
+        }
+        &__left {
+            .big-img {
+                padding-top: 8.5rem;
+            }
+        }
+        &__right {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .blog__subtitle {
+                margin-bottom: 2rem;
+                font-size: 2rem;
+            }
+        }
+        &__left-down,
+        &__right-down {
+            gap: 1.5rem;
+        }
+        &__right-right {
+            gap: 1rem;
+        }
+        .top {
+            p {
+                margin-bottom: 4.5rem;
+            }
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -308,6 +390,56 @@
                 content: url('../images/icons/wing-sm.png');
                 top: -0.5rem;
                 left: -3rem;
+            }
+        }
+    }
+
+    .blog {
+        &__inner {
+            gap: 1rem;
+        }
+        &__left,
+        &__right {
+            max-width: calc(50% - 0.5rem);
+        }
+        &__left {
+            &::after {
+                right: -0.5rem;
+            }
+        }
+        &__right {
+            .blog__subtitle {
+                margin-bottom: 1rem;
+                font-size: 1.8rem;
+                &::after {
+                    bottom: -1.5rem;
+                }
+            }
+        }
+        &__links {
+            flex-direction: column;
+        }
+        &__block {
+            p {
+                font-size: 1.2rem;
+            }
+        }
+        .big-img {
+            padding-top: 5.5rem;
+        }
+        .top {
+            p {
+                margin-bottom: 3rem;
+                line-height: 111%;
+            }
+        }
+        .blog__block.news {
+            p {
+                line-height: 111%;
+                margin-bottom: 0.5rem;
+            }
+            .read-more {
+                font-size: 1.2rem;
             }
         }
     }
@@ -455,6 +587,60 @@
             margin-bottom: 3rem;
         }
     }
+
+    .blog {
+        h2 {
+            margin: 0;
+            margin-bottom: 2.5rem;
+        }
+        &__inner {
+            flex-direction: column;
+            &::after {
+                content: none;
+            }
+        }
+        &__left {
+            max-width: 100%;
+            flex-direction: column-reverse;
+            &::after {
+                content: none;
+            }
+            .blog__subtitle {
+                font-size: 2.5rem;
+            }
+        }
+        &__right {
+            max-width: 100%;
+        }
+        &__left-down,
+        &__right-left {
+            gap: 0;
+            picture {
+                display: none;
+            }
+        }
+        &__right-down {
+            gap: 0;
+        }
+        .big-img {
+            padding: 0;
+        }
+        .top {
+            margin-bottom: 0.5rem;
+            p {
+                margin-bottom: 1.5rem;
+                font-size: 1.4rem;
+            }
+        }
+        .mobile-sm {
+            display: flex;
+            gap: 0.5rem;
+            img {
+                max-width: calc(50% - 0.25rem);
+                height: auto;
+            }
+        }
+    }
 }
 
 @media (max-width: 425px) {
@@ -509,6 +695,14 @@
             max-width: 14rem;
             font-size: 1.2rem;
             line-height: 111%;
+        }
+    }
+
+    .blog {
+        &__left {
+            .blog__subtitle {
+                font-size: 2rem;
+            }
         }
     }
 }

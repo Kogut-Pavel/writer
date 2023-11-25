@@ -402,7 +402,7 @@
     </div>
 </section>
 
-<!-- <section class="blog">
+<section class="blog">
     <div class="container">
         <h2 class="title title_h2">Блог</h2>
         <div class="blog__inner">
@@ -411,27 +411,40 @@
                 <div class="blog__left-down">
                     <div class="blog__block block-2">
                         <p class="blog__subtitle">Между строк: погружение в <span class="secondary-color">мир</span> литературных героев</p>
+                        <div class="blog__block top mobile">
+                            <p>В блоге я делюсь своими мыслями и впечатлениями о литературных произведениях, рассказываю о своем творческом процессе, воспоминаниях и деталях по сеттингу книг.</p>
+                            <a href="#" class="button button_sm">вконтакте</a>
+                        </div>
                         <div class="blog__links">
                             <a href="#" class="button button_sm">Вступить в чат</a>
                             <a href="#" class="button button_sm">Телеграм канал</a>
                         </div>
                     </div>
+
                     <div class="blog__block">
-                        <img src="assets/images/blog/photo.jpg" alt="#">
+                        <picture>
+                            <source srcset="assets/images/blog/photo-square.jpg" media="(max-width: 1200px)">
+                            <img src="assets/images/blog/photo.jpg" alt="#">
+                        </picture>
                     </div>
+                    
                 </div>
             </div>
             <div class="blog__right">
                 <p class="blog__subtitle">Истории за “кулисами” моих фантастик</p>
                 <div class="blog__right-down">
                     <div class="blog__right-left">
-                        <div class="blog__block top">
+                        <div class="blog__block top not-mobile">
                             <p>В блоге я делюсь своими мыслями и впечатлениями о литературных произведениях, рассказываю о своем творческом процессе, воспоминаниях и деталях по сеттингу книг.</p>
                             <a href="#" class="button button_sm">вконтакте</a>
                         </div>
                         <div class="blog__block">
-                            <img src="assets/images/blog/photo-2.jpg" alt="#">
+                            <picture>
+                                <source srcset="assets/images/blog/photo-2-square.jpg" media="(max-width: 1200px)">
+                                <img src="assets/images/blog/photo-2.jpg" alt="#">
+                            </picture>
                         </div>
+                        
                     </div>
                     <div class="blog__right-right">
                         <div class="blog__block news">
@@ -464,9 +477,13 @@
                     </div>
                 </div>
             </div>
+            <div class="blog__images mobile-sm">
+                <img src="assets/images/blog/photo-sm.jpg" alt="#">
+                <img src="assets/images/blog/photo-2-sm.jpg" alt="#">
+            </div>
         </div>
     </div>
-</section> -->
+</section>
 
 <!-- <section class="reviews">
     <div class="container">

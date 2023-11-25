@@ -42,7 +42,7 @@
     }
 
     &__block {
-        max-width: 28.5rem;
+        max-width: calc(50% - 1rem);
         width: 100%;
         &.block-2 {
             display: flex;
@@ -63,6 +63,9 @@
     }
 
     &__right {
+        .blog__block {
+            max-width: 100%;
+        }
         .blog__subtitle {
             margin-bottom: 4rem;
             position: relative;
@@ -77,6 +80,10 @@
     &__right-down {
         display: flex;
         gap: 2rem;
+    }
+    &__right-right,
+    &-right-left {
+        max-width: calc(50% - 1rem);
     }
     &__right-left {
         display: flex;
@@ -118,5 +125,9 @@
                 color: $darkgray;
             }
         }
+    }
+    .mobile,
+    .mobile-sm {
+        display: none;
     }
 }

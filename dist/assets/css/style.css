@@ -1804,7 +1804,7 @@ nav ul li.active {
 }
 
 .blog__block {
-    max-width: 28.5rem;
+    max-width: calc(50% - 1rem);
     width: 100%;
 }
 
@@ -1832,6 +1832,10 @@ nav ul li.active {
     gap: 0.5rem;
 }
 
+.blog__right .blog__block {
+    max-width: 100%;
+}
+
 .blog__right .blog__subtitle {
     margin-bottom: 4rem;
     position: relative;
@@ -1856,6 +1860,10 @@ nav ul li.active {
     display: -ms-flexbox;
     display: flex;
     gap: 2rem;
+}
+
+.blog__right-right, .blog-right-left {
+    max-width: calc(50% - 1rem);
 }
 
 .blog__right-left {
@@ -2015,6 +2023,24 @@ nav ul li.active {
         padding: 0 2rem;
         gap: 1.5rem;
     }
+
+    .quote h2 {
+        font-size: 13.5rem;
+    }
+
+    .blog__left .blog__block {
+        max-width: 100%;
+    }
+
+    .blog__left-down {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .blog__links {
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
 }
 
 @media (max-width: 992px) {
@@ -2112,12 +2138,24 @@ nav ul li.active {
         padding: 0;
     }
 
+    .news__row:nth-child(even) .news__block.begin {
+        padding: 0;
+    }
+
+    .news__row:nth-child(even) .news__block.begin::after {
+        content: none;
+    }
+
     .news__block {
         max-width: calc(50% - 1rem);
     }
 
+    .news__block > .news__block {
+        max-width: 100%;
+    }
+
     .news__block.begin:after {
-        right: -1rem;
+        content: none;
     }
 
     .news__block.links.mobile {
@@ -2126,7 +2164,7 @@ nav ul li.active {
         max-width: 100%;
     }
 
-    .news__block.video img {
+    .news__block img {
         -o-object-fit: contain;
         object-fit: contain;
     }
@@ -2137,6 +2175,30 @@ nav ul li.active {
 
     .news__block p {
         margin-bottom: 2rem;
+    }
+
+    .quote h2 {
+        font-size: 10.2rem;
+    }
+
+    .quote__inner {
+        padding-top: 6rem;
+    }
+
+    .quote blockquote {
+        max-width: 42rem;
+        margin-bottom: 7rem;
+        font-size: 2rem;
+    }
+
+    .quote blockquote::before {
+        content: url("../images/icons/wing-md.png");
+        top: -2rem;
+        left: -6rem;
+    }
+
+    .quote p {
+        margin-right: 0;
     }
 }
 
@@ -2225,6 +2287,41 @@ nav ul li.active {
 
     .news h2::after {
         bottom: -2rem;
+    }
+
+    .news__block {
+        margin: 1rem 0;
+    }
+
+    .news__block.links.mobile {
+        margin: 1rem 0 0 0;
+        gap: 0.5rem;
+    }
+
+    .news__block .content-title {
+        margin-bottom: 1rem;
+    }
+
+    .news__block p {
+        margin-bottom: 1.5rem;
+    }
+
+    .quote__inner {
+        padding-top: 4rem;
+    }
+
+    .quote h2 {
+        font-size: 7.6rem;
+    }
+
+    .quote blockquote {
+        font-size: 1.6rem;
+    }
+
+    .quote blockquote::before {
+        content: url("../images/icons/wing-sm.png");
+        top: -0.5rem;
+        left: -3rem;
     }
 }
 
@@ -2351,6 +2448,43 @@ nav ul li.active {
         height: 90%;
         background-color: #000;
     }
+
+    .news__row {
+        padding: 1rem 0 1.5rem 0;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+
+    .news__row:nth-child(even) {
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+
+    .news__block {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .news__block.begin::after {
+        content: none;
+    }
+
+    .news__block.video {
+        margin: 0;
+    }
+
+    .quote__inner {
+        padding-top: 3rem;
+    }
+
+    .quote h2 {
+        font-size: 5.6rem;
+    }
+
+    .quote blockquote {
+        max-width: 32rem;
+        margin-bottom: 3rem;
+    }
 }
 
 @media (max-width: 425px) {
@@ -2387,6 +2521,26 @@ nav ul li.active {
 
     .books .content {
         width: 27.6rem;
+    }
+
+    .quote__inner {
+        padding-top: 1.5rem;
+    }
+
+    .quote h2 {
+        font-size: 3.8rem;
+    }
+
+    .quote blockquote {
+        max-width: 24rem;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .quote p {
+        max-width: 14rem;
+        font-size: 1.2rem;
+        line-height: 111%;
     }
 }
 
