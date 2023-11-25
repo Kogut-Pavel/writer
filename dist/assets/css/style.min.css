@@ -1446,7 +1446,9 @@ nav ul {
     bottom: -3rem; }
   .news__row {
     padding: 0 2rem;
-    gap: 1.5rem; } }
+    gap: 1.5rem; }
+  .quote h2 {
+    font-size: 13.5rem; } }
 
 @media (max-width: 992px) {
   .hero {
@@ -1518,7 +1520,21 @@ nav ul {
     .news__block .content-title {
       margin-bottom: 1.2rem; }
     .news__block p {
-      margin-bottom: 2rem; } }
+      margin-bottom: 2rem; }
+  .quote h2 {
+    font-size: 10.2rem; }
+  .quote__inner {
+    padding-top: 6rem; }
+  .quote blockquote {
+    max-width: 42rem;
+    margin-bottom: 7rem;
+    font-size: 2rem; }
+    .quote blockquote::before {
+      content: url("../images/icons/wing-md.png");
+      top: -2rem;
+      left: -6rem; }
+  .quote p {
+    margin-right: 0; } }
 
 @media (max-width: 767px) {
   .hero__title {
@@ -1575,7 +1591,17 @@ nav ul {
     .news__block .content-title {
       margin-bottom: 1rem; }
     .news__block p {
-      margin-bottom: 1.5rem; } }
+      margin-bottom: 1.5rem; }
+  .quote__inner {
+    padding-top: 4rem; }
+  .quote h2 {
+    font-size: 7.6rem; }
+  .quote blockquote {
+    font-size: 1.6rem; }
+    .quote blockquote::before {
+      content: url("../images/icons/wing-sm.png");
+      top: -0.5rem;
+      left: -3rem; } }
 
 @media (max-width: 630px) {
   .books ul {
@@ -1662,7 +1688,14 @@ nav ul {
     .news__block.begin::after {
       content: none; }
     .news__block.video {
-      margin: 0; } }
+      margin: 0; }
+  .quote__inner {
+    padding-top: 3rem; }
+  .quote h2 {
+    font-size: 5.6rem; }
+  .quote blockquote {
+    max-width: 32rem;
+    margin-bottom: 3rem; } }
 
 @media (max-width: 425px) {
   .hero__title {
@@ -1682,7 +1715,19 @@ nav ul {
   .books ul {
     gap: 0.5rem; }
   .books .content {
-    width: 27.6rem; } }
+    width: 27.6rem; }
+  .quote__inner {
+    padding-top: 1.5rem; }
+  .quote h2 {
+    font-size: 3.8rem; }
+  .quote blockquote {
+    max-width: 24rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem; }
+  .quote p {
+    max-width: 14rem;
+    font-size: 1.2rem;
+    line-height: 111%; } }
 
 .bookspage__descr {
   max-width: 89.5rem;
