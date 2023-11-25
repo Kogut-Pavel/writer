@@ -652,6 +652,10 @@ nav ul li.active {
     .title_h2 {
         font-size: 2rem;
     }
+
+    .title_h3 {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -669,6 +673,10 @@ nav ul li.active {
 
     .title_h2 {
         font-size: 1.6rem;
+    }
+
+    .title_h3 {
+        font-size: 2rem;
     }
 }
 
@@ -1582,7 +1590,6 @@ nav ul li.active {
     margin: 2rem 0;
     max-width: 28.5rem;
     width: 100%;
-    height: 16rem;
 }
 
 .news__block.begin {
@@ -1595,7 +1602,7 @@ nav ul li.active {
     right: 0;
     top: 0;
     width: 1px;
-    height: 160px;
+    height: 100%;
     background-color: #959595;
 }
 
@@ -1683,6 +1690,10 @@ nav ul li.active {
 
 .news__block p {
     font-family: 'Inter', sans-serif;
+}
+
+.news .mobile {
+    display: none;
 }
 
 .quote__inner {
@@ -1968,6 +1979,42 @@ nav ul li.active {
     .hero__subtitle {
         font-size: 2rem;
     }
+
+    .books h2 {
+        margin-bottom: 3rem;
+    }
+
+    .books h2::after {
+        bottom: -3rem;
+    }
+
+    .books h3 {
+        margin-bottom: 1.5rem;
+    }
+
+    .books__inner {
+        padding: 3rem 0;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .books__text-block, .books__somebooks {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .books ul {
+        position: static;
+    }
+
+    .books__button::after {
+        bottom: -3rem;
+    }
+
+    .news__row {
+        padding: 0 2rem;
+        gap: 1.5rem;
+    }
 }
 
 @media (max-width: 992px) {
@@ -2036,6 +2083,61 @@ nav ul li.active {
         height: 100%;
         background-color: #000;
     }
+
+    .books h2 {
+        margin-bottom: 2.5rem;
+    }
+
+    .books h2::after {
+        bottom: -2.5rem;
+    }
+
+    .books__inner {
+        padding: 2.5rem 0;
+    }
+
+    .books__button::after {
+        bottom: -2.5rem;
+    }
+
+    .news .not-mobile {
+        display: none;
+    }
+
+    .news .mobile {
+        display: block;
+    }
+
+    .news__row {
+        padding: 0;
+    }
+
+    .news__block {
+        max-width: calc(50% - 1rem);
+    }
+
+    .news__block.begin:after {
+        right: -1rem;
+    }
+
+    .news__block.links.mobile {
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 100%;
+    }
+
+    .news__block.video img {
+        -o-object-fit: contain;
+        object-fit: contain;
+    }
+
+    .news__block .content-title {
+        margin-bottom: 1.2rem;
+    }
+
+    .news__block p {
+        margin-bottom: 2rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -2090,6 +2192,96 @@ nav ul li.active {
 
     .about__bottom-block {
         max-width: calc(50% - 1rem);
+    }
+
+    .books h2 {
+        margin-bottom: 2rem;
+    }
+
+    .books h2::after {
+        bottom: -2rem;
+    }
+
+    .books__inner {
+        padding: 2rem 0;
+        gap: 1rem;
+    }
+
+    .books__spine h3 {
+        top: 16.5rem;
+    }
+
+    .books__spine.item-3 h3 {
+        top: 15.5rem;
+    }
+
+    .books__button {
+        font-size: 1.6rem;
+    }
+
+    .books__button::after {
+        bottom: -2rem;
+    }
+
+    .news h2::after {
+        bottom: -2rem;
+    }
+}
+
+@media (max-width: 630px) {
+    .books ul {
+        display: none;
+        height: 830px;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 1.2rem;
+    }
+
+    .books li {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+        gap: 1rem;
+    }
+
+    .books li.active {
+        width: 6.4rem;
+    }
+
+    .books__spine h3 {
+        top: 15rem;
+        right: -10.7rem;
+        width: 28rem;
+    }
+
+    .books__spine.item-3 h3 {
+        top: 14rem;
+    }
+
+    .books .trigger {
+        height: 430px;
+    }
+
+    .books .content {
+        position: absolute;
+        width: 28.6rem;
+        height: 400px;
+        bottom: -1rem;
+        left: 0;
+    }
+
+    .books .content.content-2 {
+        left: -7.6rem;
+    }
+
+    .books .content.content-3 {
+        left: -15.3rem;
+    }
+
+    .books .content.content-4 {
+        left: -23rem;
     }
 }
 
@@ -2174,6 +2366,27 @@ nav ul li.active {
         -ms-flex-direction: column;
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .books__inner {
+        padding-bottom: 1.5rem;
+    }
+
+    .books__text-block {
+        padding: 2rem 2rem 2rem 1.4rem;
+    }
+
+    .books__text-block p {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .books ul {
+        gap: 0.5rem;
+    }
+
+    .books .content {
+        width: 27.6rem;
     }
 }
 

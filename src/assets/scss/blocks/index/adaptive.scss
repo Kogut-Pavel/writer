@@ -36,6 +36,13 @@
             }
         }
     }
+
+    .news {
+        &__row {
+            padding: 0 2rem;
+            gap: 1.5rem;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -109,6 +116,50 @@
         &__button {
             &::after {
                 bottom: -2.5rem;
+            }
+        }
+    }
+
+    .news {
+        .not-mobile {
+            display: none;
+        }
+        .mobile {
+            display: block;
+        }
+        &__row {
+            padding: 0;
+            &:nth-child(even) .news__block.begin {
+                padding: 0;
+                &::after {
+                    content: none;
+                }
+            }
+        }
+        &__block {
+            max-width: calc(50% - 1rem);
+            > .news__block {
+                max-width: 100%;
+            }
+            &.begin {
+                &:after {
+                    content: none;
+                }
+            }
+            &.links.mobile {
+                display: flex;
+                max-width: 100%;
+            }
+
+            img {
+                object-fit: contain;
+            }
+
+            .content-title {
+                margin-bottom: 1.2rem;
+            }
+            p {
+                margin-bottom: 2rem;
             }
         }
     }
@@ -194,13 +245,33 @@
             }
         }
     }
+
+    .news {
+        h2 {
+            &::after {
+                bottom: -2rem;
+            }
+        }
+        &__block {
+            margin: 1rem 0;
+            &.links.mobile {
+                margin: 1rem 0 0 0;
+                gap: 0.5rem;
+            }
+            .content-title {
+                margin-bottom: 1rem;
+            }
+            p {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
 }
 
 @media (max-width: 630px) {
     .books {
-
         ul {
-            display: none; 
+            display: none;
             height: 830px;
             justify-content: center;
             gap: 1.2rem;
@@ -304,6 +375,28 @@
             }
         }
     }
+
+    .news {
+        &__row {
+            padding: 1rem 0 1.5rem 0;
+            flex-direction: column-reverse;
+            &:nth-child(even) {
+                flex-direction: column-reverse;
+            }
+        }
+        &__block {
+            margin: 0;
+            max-width: 100%;
+            &.begin {
+                &::after {
+                    content: none;
+                }
+            }
+            &.video {
+                margin: 0;
+            }
+        }
+    }
 }
 
 @media (max-width: 425px) {
@@ -335,7 +428,7 @@
             }
         }
         ul {
-            gap: .5rem;
+            gap: 0.5rem;
         }
         .content {
             width: 27.6rem;

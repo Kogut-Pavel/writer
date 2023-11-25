@@ -1155,8 +1155,7 @@ nav ul {
 .news__block {
   margin: 2rem 0;
   max-width: 28.5rem;
-  width: 100%;
-  height: 16rem; }
+  width: 100%; }
   .news__block.begin {
     position: relative; }
     .news__block.begin::after {
@@ -1165,7 +1164,7 @@ nav ul {
       right: 0;
       top: 0;
       width: 1px;
-      height: 160px;
+      height: 100%;
       background-color: #959595; }
   .news__block.links {
     display: flex;
@@ -1224,6 +1223,9 @@ nav ul {
     object-fit: cover; }
   .news__block p {
     font-family: 'Inter', sans-serif; }
+
+.news .mobile {
+  display: none; }
 
 .quote__inner {
   padding-top: 9.5rem;
@@ -1441,7 +1443,10 @@ nav ul {
   .books ul {
     position: static; }
   .books__button::after {
-    bottom: -3rem; } }
+    bottom: -3rem; }
+  .news__row {
+    padding: 0 2rem;
+    gap: 1.5rem; } }
 
 @media (max-width: 992px) {
   .hero {
@@ -1488,7 +1493,32 @@ nav ul {
   .books__inner {
     padding: 2.5rem 0; }
   .books__button::after {
-    bottom: -2.5rem; } }
+    bottom: -2.5rem; }
+  .news .not-mobile {
+    display: none; }
+  .news .mobile {
+    display: block; }
+  .news__row {
+    padding: 0; }
+    .news__row:nth-child(even) .news__block.begin {
+      padding: 0; }
+      .news__row:nth-child(even) .news__block.begin::after {
+        content: none; }
+  .news__block {
+    max-width: calc(50% - 1rem); }
+    .news__block > .news__block {
+      max-width: 100%; }
+    .news__block.begin:after {
+      content: none; }
+    .news__block.links.mobile {
+      display: flex;
+      max-width: 100%; }
+    .news__block img {
+      object-fit: contain; }
+    .news__block .content-title {
+      margin-bottom: 1.2rem; }
+    .news__block p {
+      margin-bottom: 2rem; } }
 
 @media (max-width: 767px) {
   .hero__title {
@@ -1534,7 +1564,18 @@ nav ul {
   .books__button {
     font-size: 1.6rem; }
     .books__button::after {
-      bottom: -2rem; } }
+      bottom: -2rem; }
+  .news h2::after {
+    bottom: -2rem; }
+  .news__block {
+    margin: 1rem 0; }
+    .news__block.links.mobile {
+      margin: 1rem 0 0 0;
+      gap: 0.5rem; }
+    .news__block .content-title {
+      margin-bottom: 1rem; }
+    .news__block p {
+      margin-bottom: 1.5rem; } }
 
 @media (max-width: 630px) {
   .books ul {
@@ -1609,7 +1650,19 @@ nav ul {
         right: -1rem;
         width: 0.05rem;
         height: 90%;
-        background-color: #000; } }
+        background-color: #000; }
+  .news__row {
+    padding: 1rem 0 1.5rem 0;
+    flex-direction: column-reverse; }
+    .news__row:nth-child(even) {
+      flex-direction: column-reverse; }
+  .news__block {
+    margin: 0;
+    max-width: 100%; }
+    .news__block.begin::after {
+      content: none; }
+    .news__block.video {
+      margin: 0; } }
 
 @media (max-width: 425px) {
   .hero__title {
@@ -1627,7 +1680,7 @@ nav ul {
       margin-bottom: 1rem;
       font-size: 1.2rem; }
   .books ul {
-    gap: .5rem; }
+    gap: 0.5rem; }
   .books .content {
     width: 27.6rem; } }
 
