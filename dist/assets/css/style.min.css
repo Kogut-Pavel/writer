@@ -1938,7 +1938,7 @@ nav ul {
   letter-spacing: 0.7px;
   text-transform: uppercase;
   color: #626E13; }
-  .bookspage__pagination li {
+  .bookspage__pagination button {
     width: 4.2rem;
     height: 4.2rem;
     background: #fff;
@@ -1949,10 +1949,19 @@ nav ul {
     justify-content: center;
     cursor: pointer;
     transition: all 0.2s linear; }
-    .bookspage__pagination li.active {
+    .bookspage__pagination button.active {
       border: 1px solid #626E13; }
-    .bookspage__pagination li:hover {
+    .bookspage__pagination button:hover {
       border: 1px solid #626E13; }
+
+.hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; }
 
 .book__descr {
   max-width: calc(50% - 1rem);

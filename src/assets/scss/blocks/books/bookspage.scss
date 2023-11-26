@@ -25,11 +25,11 @@
         gap: 1rem;
         font-family: 'Inter', sans-serif;
         font-weight: 700;
-        line-height: 155.1%; 
+        line-height: 155.1%;
         letter-spacing: 0.7px;
         text-transform: uppercase;
         color: $secondary;
-        li {
+        button {
             width: 4.2rem;
             height: 4.2rem;
             background: #fff;
@@ -48,4 +48,16 @@
             }
         }
     }
+
+}
+
+
+.hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
