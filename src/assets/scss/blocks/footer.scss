@@ -6,8 +6,13 @@
         padding-right: 10rem;
         display: flex;
         justify-content: space-between;
+        gap: 2rem; 
+    }
+    &__lists {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
         gap: 2rem;
-        
     }
     .container {
         position: relative;
@@ -68,10 +73,14 @@
                 opacity: 0.5;
             }
             input[type='checkbox'] {
+                display: block;
                 width: 1.5rem;
                 height: 1.5rem;
                 background: transparent;
             }
+        }
+        button {
+            font-family: 'Montserrat', sans-serif;
         }
     }
     .second-column {
@@ -130,5 +139,9 @@
         a {
             letter-spacing: 0.48px;
         }
+    }
+
+    .mobile {
+        display: none;
     }
 }

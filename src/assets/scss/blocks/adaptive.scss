@@ -6,6 +6,45 @@
         margin-bottom: 3rem;
         font-size: 2rem;
     }
+
+    .footer {
+        padding: 4.7rem 0 2.7rem 0;
+        .container {
+            &::after {
+                right: 0;
+                bottom: 0;
+            }
+        }
+        &__inner {
+            padding-right: 0;
+        }
+        .mobile {
+            display: flex;
+            margin-bottom: 4rem;
+        }
+        .not-mobile {
+            display: none;
+        }
+        &__form {
+            margin-bottom: 2rem;
+        }
+        &__lists {
+            padding-top: 7rem;
+            max-width: calc(50% - 1rem);
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        .second-column {
+            gap: 2rem;
+        }
+        .blog {
+            margin-top: -7rem;
+        }
+        &__bottom {
+            flex-direction: column;
+            gap: 3rem;
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -96,10 +135,6 @@
             transform: translate(-50%, 0%) rotate(-45deg);
         }
     }
-
-    .footer {
-        
-    }
 }
 
 @media (max-width: 576px) {
@@ -108,5 +143,68 @@
     }
     section {
         padding-bottom: 7rem;
+    }
+
+    .footer {
+        padding: 3.2rem 0 2.4rem 0;
+        .container {
+            &::after {
+                content: url('../images/decor/stylus-sm.png');
+                bottom: -2rem;
+            }
+        }
+        &__inner {
+            flex-direction: column;
+            .footer__column {
+                max-width: 100%;
+            }
+        }
+        &__contacts {
+            gap: 1.5rem;
+            .footer__list {
+                gap: 0.5rem;
+            }
+        }
+        .mobile {
+            margin-bottom: 0;
+        }
+        &__lists {
+            margin-bottom: 3rem;
+            max-width: 100%;
+            .footer__column {
+                max-width: calc(50% - 1rem);
+                width: 100%;
+            }            
+            padding-top: 0;
+        }
+        .blog {
+            margin-top: 0;
+            max-width: 100%;
+        }
+        &__list {
+            gap: 0.5rem;
+            ul {
+                gap: 1rem;
+            }
+        }
+        &__bottom {
+            gap: 2rem;
+        }
+    }
+}
+
+
+@media (max-width: 425px) { 
+    .footer {
+        &__list {
+            ul {
+                li {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        &__bottom {
+            gap: 1rem;
+        }
     }
 }

@@ -521,19 +521,12 @@ nav ul li.active {
     border: 1px solid #626E13;
 }
 
-.reviewofwork__image {
-    width: 16.3rem;
-    height: 16.3rem;
-}
-
 .reviewofwork__image img {
-    width: auto;
     border-radius: 0.5rem;
 }
 
 .reviewofwork__content p {
     font-family: 'Inter', sans-serif;
-    width: 40.2rem;
 }
 
 .reviewofwork__name {
@@ -1919,6 +1912,11 @@ nav ul li.active {
     color: #3D4031;
 }
 
+.blog .mobile,
+.blog .mobile-sm {
+    display: none;
+}
+
 .reviews__header {
     display: -ms-flexbox;
     display: flex;
@@ -1949,34 +1947,15 @@ nav ul li.active {
     line-height: 111%;
 }
 
-.reviews__inner {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
-.reviews__row {
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    gap: 2rem;
-}
-
-.reviews .row1 .owl-stage {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-}
-
-.reviews .row1 .owl-stage .owl-item {
-    width: 59rem !important;
-}
-
 .reviews .row2 .reviewofwork {
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
     text-align: left;
+}
+
+.reviews .owl-carousel .owl-item img {
+    width: auto !important;
+    height: auto !important;
 }
 
 @media (max-width: 1200px) {
@@ -2028,18 +2007,72 @@ nav ul li.active {
         font-size: 13.5rem;
     }
 
+    .blog .not-mobile {
+        display: none;
+    }
+
+    .blog .mobile {
+        display: block;
+    }
+
+    .blog__left {
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
     .blog__left .blog__block {
         max-width: 100%;
     }
 
     .blog__left-down {
+        gap: 2rem;
+    }
+
+    .blog__right {
+        display: -ms-flexbox;
+        display: flex;
         -ms-flex-direction: column;
         flex-direction: column;
+        gap: 2rem;
+    }
+
+    .blog__right .blog__subtitle {
+        margin-bottom: 2rem;
+        font-size: 3rem;
     }
 
     .blog__links {
         -ms-flex-direction: row;
         flex-direction: row;
+    }
+
+    .blog__right-down {
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        gap: 2rem;
+        height: 100%;
+    }
+
+    .blog__right-left {
+        -ms-flex-pack: end;
+        justify-content: end;
+    }
+
+    .blog__right-right {
+        max-width: 100%;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .blog .top {
+        margin-bottom: 1rem;
+    }
+
+    .blog .top p {
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -2200,6 +2233,39 @@ nav ul li.active {
     .quote p {
         margin-right: 0;
     }
+
+    .blog h2 {
+        margin-bottom: -2rem;
+    }
+
+    .blog__left .big-img {
+        padding-top: 8.5rem;
+    }
+
+    .blog__right {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .blog__right .blog__subtitle {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    .blog__left-down, .blog__right-down {
+        gap: 1.5rem;
+    }
+
+    .blog__right-right {
+        gap: 1rem;
+    }
+
+    .blog .top p {
+        margin-bottom: 4.5rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -2322,6 +2388,54 @@ nav ul li.active {
         content: url("../images/icons/wing-sm.png");
         top: -0.5rem;
         left: -3rem;
+    }
+
+    .blog__inner {
+        gap: 1rem;
+    }
+
+    .blog__left, .blog__right {
+        max-width: calc(50% - 0.5rem);
+    }
+
+    .blog__left::after {
+        right: -0.5rem;
+    }
+
+    .blog__right .blog__subtitle {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+    .blog__right .blog__subtitle::after {
+        bottom: -1.5rem;
+    }
+
+    .blog__links {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .blog__block p {
+        font-size: 1.2rem;
+    }
+
+    .blog .big-img {
+        padding-top: 5.5rem;
+    }
+
+    .blog .top p {
+        margin-bottom: 3rem;
+        line-height: 111%;
+    }
+
+    .blog .blog__block.news p {
+        line-height: 111%;
+        margin-bottom: 0.5rem;
+    }
+
+    .blog .blog__block.news .read-more {
+        font-size: 1.2rem;
     }
 }
 
@@ -2485,6 +2599,74 @@ nav ul li.active {
         max-width: 32rem;
         margin-bottom: 3rem;
     }
+
+    .blog h2 {
+        margin: 0;
+        margin-bottom: 2.5rem;
+    }
+
+    .blog__inner {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .blog__inner::after {
+        content: none;
+    }
+
+    .blog__left {
+        max-width: 100%;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+
+    .blog__left::after {
+        content: none;
+    }
+
+    .blog__left .blog__subtitle {
+        font-size: 2.5rem;
+    }
+
+    .blog__right {
+        max-width: 100%;
+    }
+
+    .blog__left-down, .blog__right-left {
+        gap: 0;
+    }
+
+    .blog__left-down picture, .blog__right-left picture {
+        display: none;
+    }
+
+    .blog__right-down {
+        gap: 0;
+    }
+
+    .blog .big-img {
+        padding: 0;
+    }
+
+    .blog .top {
+        margin-bottom: 0.5rem;
+    }
+
+    .blog .top p {
+        margin-bottom: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .blog .mobile-sm {
+        display: -ms-flexbox;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .blog .mobile-sm img {
+        max-width: calc(50% - 0.25rem);
+        height: auto;
+    }
 }
 
 @media (max-width: 425px) {
@@ -2541,6 +2723,10 @@ nav ul li.active {
         max-width: 14rem;
         font-size: 1.2rem;
         line-height: 111%;
+    }
+
+    .blog__left .blog__subtitle {
+        font-size: 2rem;
     }
 }
 

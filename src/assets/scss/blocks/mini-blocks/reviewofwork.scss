@@ -7,17 +7,20 @@
     border-radius: .5rem;
     border: 1px solid $secondary;
     &__image {
-        width: 16.3rem;
-        height: 16.3rem;
+        // width: 16.3rem !important;
+        // width: 100%;
+        // height: auto;
+        // max-height: 16.3rem;
         img {
-            width: auto;
+            // width: auto !important;
+            // height: 100%;
             border-radius: 0.5rem;
         }
     }
     &__content {
         p {
             font-family: 'Inter', sans-serif;
-            width: 40.2rem;
+            // width: 40.2rem;
         }
     }
     &__name {
