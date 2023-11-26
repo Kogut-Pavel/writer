@@ -11,6 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // Находим заголовки карточек и обрезаем если слишком длинное название
+
     const cardTitles = document.querySelectorAll('.card__title');
     const cardGenres = document.querySelectorAll('.card__genres');
 
@@ -22,9 +23,15 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    if (window.innerWidth > 1200) {
+        cutLength(cardTitles, 24);
+        cutLength(cardGenres, 37);
+    }
+    if (window.innerWidth <= 1200) {
+        cutLength(cardTitles, 33);
+        cutLength(cardGenres, 45);
+    }
 
-    cutLength(cardTitles, 24);
-    cutLength(cardGenres, 37);
 
     // Горизонтальный аккордеон
 

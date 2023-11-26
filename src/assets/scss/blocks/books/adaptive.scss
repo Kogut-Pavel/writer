@@ -1,0 +1,41 @@
+@media (max-width: 1200px) {
+    .bookspage {
+        &__descr {
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .bookspage {
+        &__descr {
+            font-size: 2rem;
+        }
+        &__inner {
+            gap: 1.4rem;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .bookspage {
+        &__inner {
+            gap: 1rem;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .bookspage {
+        &__descr {
+            margin-bottom: 2.5rem;
+            text-indent: unset;
+            font-size: 1.6rem;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+}

@@ -516,6 +516,28 @@ nav ul {
       max-height: 53.3rem;
       height: 100%; }
 
+@media (max-width: 1248px) {
+  .card {
+    max-width: calc(25% - 1.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-between; }
+    .card img {
+      height: auto;
+      margin-bottom: 0; }
+    .card__title {
+      height: 3.4rem;
+      display: inline-block;
+      display: flex;
+      align-items: center; }
+    .card__genres {
+      margin-bottom: 0; }
+    .card__media {
+      gap: 3rem; }
+    .card.decor {
+      max-width: calc(50% - 1rem); } }
+
 @media (max-width: 1200px) {
   .title_h1 {
     font-size: 10.8rem; } }
@@ -530,7 +552,13 @@ nav ul {
     .title_h2 {
       font-size: 2rem; }
     .title_h3 {
-      font-size: 2.5rem; } }
+      font-size: 2.5rem; }
+  .breadcrumbs {
+    margin: 4rem 0 2rem 0; }
+  .card {
+    max-width: calc(33% - 0.7rem); }
+    .card.decor {
+      max-width: calc(67% - 0.7rem); } }
 
 @media (max-width: 767px) {
   nav {
@@ -542,11 +570,27 @@ nav ul {
     .title_h2 {
       font-size: 1.6rem; }
     .title_h3 {
-      font-size: 2rem; } }
+      font-size: 2rem; }
+  .card {
+    max-width: calc(50% - 0.5rem); }
+    .card.decor {
+      max-width: calc(50% - 0.5rem); } }
 
 @media (max-width: 576px) {
   .title_h1 {
-    font-size: 4.6rem; } }
+    font-size: 4.6rem; }
+  .breadcrumbs {
+    margin: 4rem 0 2.5rem 0; }
+  .card__title {
+    font-size: 1.2rem; }
+  .card__genres {
+    font-size: 1.2rem; }
+  .card__media {
+    font-size: 1rem;
+    gap: 1.4rem; }
+  .card__button {
+    font-size: 1.2rem;
+    padding: 1.1rem 0; } }
 
 @media (max-width: 425px) {
   .title_h1 {
@@ -1962,6 +2006,28 @@ nav ul {
   position: absolute;
   white-space: nowrap;
   width: 1px; }
+
+@media (max-width: 1200px) {
+  .bookspage__descr {
+    margin-bottom: 3rem;
+    font-size: 2.5rem; } }
+
+@media (max-width: 992px) {
+  .bookspage__descr {
+    font-size: 2rem; }
+  .bookspage__inner {
+    gap: 1.4rem; } }
+
+@media (max-width: 767px) {
+  .bookspage__inner {
+    gap: 1rem; } }
+
+@media (max-width: 576px) {
+  .bookspage__descr {
+    margin-bottom: 2.5rem;
+    text-indent: unset;
+    font-size: 1.6rem;
+    text-align: center; } }
 
 .book__descr {
   max-width: calc(50% - 1rem);
