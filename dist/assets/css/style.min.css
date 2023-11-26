@@ -797,7 +797,8 @@ nav ul {
   .header .menu.active {
     transform: translateX(0); }
   .header .menu li {
-    list-style-type: none; }
+    list-style-type: none;
+    font-size: 1.8rem; }
   .header .menu-btn.active span:nth-of-type(1) {
     display: none; }
   .header .menu-btn.active span:nth-of-type(2) {
