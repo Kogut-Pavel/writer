@@ -854,6 +854,8 @@ nav ul {
 
 @media (max-width: 576px) {
   .section-description {
+    text-indent: unset;
+    text-align: center;
     margin-bottom: 1.5rem; }
   section {
     padding-bottom: 7rem; }
@@ -2319,6 +2321,160 @@ nav ul {
     width: 100%;
     height: 0.1rem;
     background-color: #959595; }
+
+@media (max-width: 1248px) {
+  .biography__inner {
+    flex-direction: column; }
+  .biography__top-left, .biography__top-right {
+    max-width: 100%; }
+  .biography__top-left::after {
+    content: none; }
+  .biography__top-right {
+    position: relative; }
+    .biography__top-right::after {
+      content: '';
+      position: absolute;
+      bottom: -2.4rem;
+      left: 0;
+      width: 100%;
+      height: 0.1rem;
+      background-color: #959595; }
+  .biography__havetoread {
+    max-width: 52rem;
+    margin-left: auto;
+    margin-right: auto; }
+    .biography__havetoread span {
+      bottom: 3rem;
+      left: -7rem; }
+  .biography__row {
+    flex-direction: column;
+    gap: 4.8rem; }
+    .biography__row.bottom {
+      gap: 2.4rem; }
+    .biography__row .big__text {
+      max-width: 100%; }
+      .biography__row .big__text::after {
+        right: 46%; }
+    .biography__row img {
+      margin-left: auto; }
+  .biography__text {
+    margin-top: 2.4rem; } }
+
+@media (max-width: 992px) {
+  .biography h2 {
+    font-size: 3rem; }
+  .biography__row .big__text::after {
+    right: 0; } }
+
+@media (max-width: 767px) {
+  .biography h2 {
+    font-size: 2.5rem; }
+  .biography__top-left {
+    gap: 1rem 2rem; }
+  .biography__havetoread {
+    font-size: 9rem;
+    margin-right: 0; }
+    .biography__havetoread span {
+      max-width: 21rem;
+      font-size: 1.8rem;
+      bottom: 2rem;
+      left: 6rem; }
+  .biography__row .big__text {
+    font-size: 3rem; }
+    .biography__row .big__text::after {
+      width: 2.7rem;
+      height: 2.7rem;
+      bottom: 0; }
+  .biography__row .media {
+    gap: 1rem; }
+    .biography__row .media .button {
+      font-size: 1.2rem; } }
+
+@media (max-width: 576px) {
+  .biography h2 {
+    font-size: 2rem; }
+  .biography__inner {
+    gap: 1rem; }
+  .biography__top-left, .biography__top-right {
+    gap: 1rem; }
+  .biography__top-left h2,
+  .biography__top-left img {
+    max-width: calc(50% - 0.5rem); }
+  .biography__top-right::after {
+    bottom: -1rem; }
+  .biography__top-right > img,
+  .biography__top-right .biography__block {
+    max-width: calc(50% - 0.5rem); }
+  .biography__block {
+    padding-top: 0; }
+    .biography__block h2 {
+      font-size: 1.8rem;
+      padding: 6rem 1.5rem; }
+  .biography__havetoread {
+    font-size: 7rem; }
+    .biography__havetoread span {
+      max-width: 19rem;
+      font-size: 1.6rem;
+      bottom: 1rem;
+      left: 0; }
+  .biography__text {
+    margin-top: 1rem;
+    gap: 1rem; }
+    .biography__text:first-child::after {
+      bottom: -1.8rem; }
+  .biography__row {
+    gap: 3.6rem; }
+    .biography__row.bottom {
+      gap: 1rem; }
+    .biography__row .big__text {
+      margin-bottom: 1.5rem;
+      font-size: 2rem; }
+      .biography__row .big__text::after {
+        width: 2.4rem;
+        height: 2.4rem;
+        bottom: 0; }
+    .biography__row .media {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 1rem; }
+      .biography__row .media .button {
+        font-size: 1.2rem; } }
+
+@media (max-width: 425px) {
+  .biography h2 {
+    font-size: 1.6rem; }
+  .biography__block h2 {
+    font-size: 1.2rem;
+    padding: 4rem 1.5rem; }
+  .biography p {
+    max-width: 100%;
+    font-size: 1.2rem;
+    line-height: 111%; }
+  .biography__havetoread {
+    font-size: 5rem; }
+    .biography__havetoread span {
+      max-width: 14rem;
+      font-size: 1.2rem;
+      bottom: 0.8rem;
+      left: -1rem; }
+  .biography__text {
+    flex-direction: column; }
+  .biography__row-block {
+    gap: 1rem; }
+    .biography__row-block:last-child {
+      display: none; }
+  .biography__row .media {
+    position: static;
+    flex-direction: row;
+    gap: 1.1rem; }
+    .biography__row .media .button {
+      font-size: 1.4rem; }
+  .biography__row.bottom {
+    gap: 2rem; }
+  .biography__row img {
+    margin: 0;
+    max-width: 100%;
+    order: 3; } }
 
 .contacts__inner {
   display: flex;
