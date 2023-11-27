@@ -12,6 +12,19 @@
             }
         }
     }
+
+    .quote.book {
+        blockquote {
+            font-size: 7rem;
+            span {
+                max-width: 70rem;
+            }
+        }
+        img {
+            max-width: 34rem;
+            top: 43%;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -83,6 +96,21 @@
             @include line(-1.2rem, $lightgray);
         }
     }
+
+    .quote.book {
+        h2 {
+            top: 3rem;
+        }
+        blockquote {
+            font-size: 5rem;
+            span {
+                max-width: 49rem;
+            }
+        }
+        img {
+            max-width: 24rem;
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -121,6 +149,18 @@
             margin-top: 1.2rem;
         }
     }
+
+    .quote.book {
+        blockquote {
+            font-size: 4rem;
+            span {
+                max-width: 40rem;
+            }
+        }
+        img {
+            max-width: 20rem;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -140,6 +180,21 @@
         }
         &__genres {
             font-size: 1.4rem;
+        }
+    }
+
+    .quote.book {
+        h2 {
+            top: 2rem;
+        }
+        blockquote {
+            font-size: 3rem;
+            span {
+                max-width: 29rem;
+            }
+        }
+        img {
+            max-width: 14rem;
         }
     }
 }
@@ -185,6 +240,21 @@
             img {
                 max-width: calc(50% - 0.5rem);
             }
+        }
+    }
+
+    .quote.book {
+        h2 {
+            top: 1.8rem;
+        }
+        blockquote {
+            font-size: 2.2rem;
+            span {
+                max-width: 19rem;
+            }
+        }
+        img {
+            max-width: 9rem;
         }
     }
 }

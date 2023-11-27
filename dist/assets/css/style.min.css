@@ -2196,7 +2196,14 @@ nav ul {
   .book__specifications-title {
     max-width: calc(70% - 1rem); }
   .book__specifications-value {
-    max-width: calc(30% - 1rem); } }
+    max-width: calc(30% - 1rem); }
+  .quote.book blockquote {
+    font-size: 7rem; }
+    .quote.book blockquote span {
+      max-width: 70rem; }
+  .quote.book img {
+    max-width: 34rem;
+    top: 43%; } }
 
 @media (max-width: 992px) {
   .book .mobile {
@@ -2249,7 +2256,15 @@ nav ul {
       left: 0;
       width: 100%;
       height: 0.1rem;
-      background-color: #959595; } }
+      background-color: #959595; }
+  .quote.book h2 {
+    top: 3rem; }
+  .quote.book blockquote {
+    font-size: 5rem; }
+    .quote.book blockquote span {
+      max-width: 49rem; }
+  .quote.book img {
+    max-width: 24rem; } }
 
 @media (max-width: 767px) {
   .book__descr {
@@ -2271,7 +2286,13 @@ nav ul {
     font-size: 1.4rem; }
   .book__miniimages {
     padding-top: 0;
-    margin-top: 1.2rem; } }
+    margin-top: 1.2rem; }
+  .quote.book blockquote {
+    font-size: 4rem; }
+    .quote.book blockquote span {
+      max-width: 40rem; }
+  .quote.book img {
+    max-width: 20rem; } }
 
 @media (max-width: 576px) {
   .book__descr {
@@ -2282,7 +2303,15 @@ nav ul {
   .book__title {
     font-size: 2.5rem; }
   .book__genres {
-    font-size: 1.4rem; } }
+    font-size: 1.4rem; }
+  .quote.book h2 {
+    top: 2rem; }
+  .quote.book blockquote {
+    font-size: 3rem; }
+    .quote.book blockquote span {
+      max-width: 29rem; }
+  .quote.book img {
+    max-width: 14rem; } }
 
 @media (max-width: 425px) {
   .book__descr {
@@ -2307,7 +2336,15 @@ nav ul {
   .book__miniimages {
     gap: 1rem; }
     .book__miniimages img {
-      max-width: calc(50% - 0.5rem); } }
+      max-width: calc(50% - 0.5rem); }
+  .quote.book h2 {
+    top: 1.8rem; }
+  .quote.book blockquote {
+    font-size: 2.2rem; }
+    .quote.book blockquote span {
+      max-width: 19rem; }
+  .quote.book img {
+    max-width: 9rem; } }
 
 .biography img {
   border-radius: 0.2rem; }
