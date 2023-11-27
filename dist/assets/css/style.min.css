@@ -2203,7 +2203,9 @@ nav ul {
       max-width: 70rem; }
   .quote.book img {
     max-width: 34rem;
-    top: 43%; } }
+    top: 43%; }
+  .otherbooks__descr {
+    font-size: 3rem; } }
 
 @media (max-width: 992px) {
   .book .mobile {
@@ -2264,7 +2266,15 @@ nav ul {
     .quote.book blockquote span {
       max-width: 49rem; }
   .quote.book img {
-    max-width: 24rem; } }
+    max-width: 24rem; }
+  .otherbooks__header {
+    margin-bottom: 3rem; }
+  .otherbooks__descr {
+    font-size: 2rem; }
+  .otherbooks__inner {
+    overflow-x: scroll; }
+    .otherbooks__inner::-webkit-scrollbar {
+      display: none; } }
 
 @media (max-width: 767px) {
   .book__descr {
@@ -2292,7 +2302,13 @@ nav ul {
     .quote.book blockquote span {
       max-width: 40rem; }
   .quote.book img {
-    max-width: 20rem; } }
+    max-width: 20rem; }
+  .otherbooks__header {
+    margin-bottom: 2.5rem; }
+  .otherbooks__descr {
+    font-size: 1.8rem; }
+  .otherbooks__inner {
+    gap: 1rem; } }
 
 @media (max-width: 576px) {
   .book__descr {
@@ -2311,7 +2327,18 @@ nav ul {
     .quote.book blockquote span {
       max-width: 29rem; }
   .quote.book img {
-    max-width: 14rem; } }
+    max-width: 14rem; }
+  .otherbooks__header {
+    margin-bottom: 2rem;
+    flex-direction: column;
+    gap: 0; }
+  .otherbooks h2 {
+    max-width: 100%; }
+  .otherbooks__descr {
+    max-width: 100%;
+    font-size: 1.6rem; }
+  .otherbooks__inner {
+    gap: 1rem; } }
 
 @media (max-width: 425px) {
   .book__descr {
