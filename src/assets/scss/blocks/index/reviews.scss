@@ -24,34 +24,22 @@
         text-transform: uppercase;
         line-height: 111%;
     }
-    
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    &__row {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+
+    }
 
     .row2 {
         .reviewofwork {
             flex-direction: row-reverse;
             text-align: left;
         }
-        .owl-stage {
-            .owl-item {
-                // min-width: 59rem !important;
-            }
-        }
     }
-    .owl-carousel {
-        .owl-item {
-            // width: 59rem !important;
-            img {
-                width: auto !important;
-                height: auto !important;
-            }
-        }
-    }
-    // .row1 {
-    //     .owl-stage {
-    //         .owl-item {
-    //             max-width: 59rem !important;
-    //             width: 100% !important;
-    //         }
-    //     }
-    // }
 }

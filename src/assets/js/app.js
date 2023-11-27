@@ -32,7 +32,6 @@ window.addEventListener('DOMContentLoaded', () => {
         cutLength(cardGenres, 45);
     }
 
-
     // Горизонтальный аккордеон
 
     $(function () {
@@ -82,26 +81,48 @@ window.addEventListener('DOMContentLoaded', () => {
     // Слайдеры
 
     $('.owl-carousel.row1').owlCarousel({
-        items: 2,
+        items: 3,
         margin: 20,
         loop: true,
         center: true,
         lazyLoad: true,
-        stagePadding: 50,
+        stagePadding: 0,
         autoplay: true,
         autoplayHoverPause: true,
         autoplayTimeout: 6000,
+        autoWidth: true,
+        dots: false,
+        responsive: {
+            0: {
+                margin: 10,
+                items: 1,
+            },
+            767: {
+                margin: 20,
+                items: 3,
+            },
+        },
     });
     $('.owl-carousel.row2').owlCarousel({
         items: 2,
         margin: 20,
         loop: true,
         lazyLoad: true,
-        stagePadding: 160,
+        stagePadding: 170,
         autoplay: true,
         autoplayHoverPause: true,
         autoplayTimeout: 7000,
         rtl: true,
+        dots: false,
+        autoWidth: true,
+        responsive: {
+            0: {
+                margin: 10,
+            },
+            767: {
+                margin: 20,
+            },
+        },
     });
     $('.owl-carousel.row3').owlCarousel({
         items: 2,
@@ -112,6 +133,16 @@ window.addEventListener('DOMContentLoaded', () => {
         stagePadding: 160,
         autoplay: true,
         autoplayHoverPause: true,
+        dots: false,
+        autoWidth: true,
+        responsive: {
+            0: {
+                margin: 10,
+            },
+            767: {
+                margin: 20,
+            },
+        },
     });
     $('.owl-carousel.book-reviews').owlCarousel({
         items: 2,
@@ -122,6 +153,17 @@ window.addEventListener('DOMContentLoaded', () => {
         autoplay: true,
         autoplayHoverPause: true,
         autoplayTimeout: 7000,
+        dots: false,
+        autoWidth: true,
+        //     // responsive:{
+        //     //     0:{
+        //     //         items:1
+        //     //     },
+        //     //     600:{
+        //     //         items:1
+        //     //     },
+
+        //     // }
     });
     $('.owl-carousel.book-reviews2').owlCarousel({
         items: 2,
@@ -132,59 +174,66 @@ window.addEventListener('DOMContentLoaded', () => {
         stagePadding: 160,
         autoplay: true,
         autoplayHoverPause: true,
+        dots: false,
+        autoWidth: true,
     });
 
     // Пагинация
 
-    const content = document.querySelector('.content');
-    const itemsPerPage = 14; // set number of items per page
-    let currentPage = 0;
-    const items = Array.from(content.querySelectorAll('.card')).slice(0);
+    try {
+        const content = document.querySelector('.content');
+        const itemsPerPage = 14; // set number of items per page
+        let currentPage = 0;
+        const items = Array.from(content.querySelectorAll('.card')).slice(0);
 
-    function showPage(page) {
-        const startIndex = page * itemsPerPage;
-        const endIndex = startIndex + itemsPerPage;
-        items.forEach((item, index) => {
-            item.classList.toggle(
-                'hidden',
-                index < startIndex || index >= endIndex
-            );
-        });
-        updateActiveButtonStates();
-    }
-
-    function createPageButtons() {
-        const totalPages = Math.ceil(items.length / itemsPerPage);
-        const paginationContainer = document.createElement('div');
-        const paginationDiv = document.body.appendChild(paginationContainer);
-        paginationContainer.classList.add('bookspage__pagination');
-
-        // Add page buttons
-        for (let i = 0; i < totalPages; i++) {
-            const pageButton = document.createElement('button');
-            pageButton.textContent = i + 1;
-            pageButton.addEventListener('click', () => {
-                currentPage = i;
-                showPage(currentPage);
-                updateActiveButtonStates();
+        function showPage(page) {
+            const startIndex = page * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            items.forEach((item, index) => {
+                item.classList.toggle(
+                    'hidden',
+                    index < startIndex || index >= endIndex
+                );
             });
-
-            content.parentNode.appendChild(paginationContainer);
-            paginationDiv.appendChild(pageButton);
+            updateActiveButtonStates();
         }
-    }
 
-    function updateActiveButtonStates() {
-        const pageButtons = document.querySelectorAll('.bookspage__pagination button');
-        pageButtons.forEach((button, index) => {
-            if (index === currentPage) {
-                button.classList.add('active');
-            } else {
-                button.classList.remove('active');
+        function createPageButtons() {
+            const totalPages = Math.ceil(items.length / itemsPerPage);
+            const paginationContainer = document.createElement('div');
+            const paginationDiv =
+                document.body.appendChild(paginationContainer);
+            paginationContainer.classList.add('bookspage__pagination');
+
+            // Add page buttons
+            for (let i = 0; i < totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i + 1;
+                pageButton.addEventListener('click', () => {
+                    currentPage = i;
+                    showPage(currentPage);
+                    updateActiveButtonStates();
+                });
+
+                content.parentNode.appendChild(paginationContainer);
+                paginationDiv.appendChild(pageButton);
             }
-        });
-    }
+        }
 
-    createPageButtons(); // Call this function to create the page buttons initially
-    showPage(currentPage);
+        function updateActiveButtonStates() {
+            const pageButtons = document.querySelectorAll(
+                '.bookspage__pagination button'
+            );
+            pageButtons.forEach((button, index) => {
+                if (index === currentPage) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+        }
+
+        createPageButtons(); // Call this function to create the page buttons initially
+        showPage(currentPage);
+    } catch (error) {}
 });

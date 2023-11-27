@@ -440,17 +440,22 @@ nav ul {
     border: none; }
 
 .reviewofwork {
-  max-width: 59rem;
   width: 100%;
+  max-width: 59rem;
   display: flex;
   gap: 1rem;
   padding: 1rem;
   border-radius: .5rem;
   border: 1px solid #626E13; }
-  .reviewofwork__image img {
-    border-radius: 0.5rem; }
+  .reviewofwork__image {
+    width: 16.3rem; }
+    .reviewofwork__image img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem; }
   .reviewofwork__content p {
-    font-family: 'Inter', sans-serif; }
+    font-family: 'Inter', sans-serif;
+    width: 40.2rem; }
   .reviewofwork__name {
     margin-bottom: .2rem;
     font-weight: 600;
@@ -574,7 +579,18 @@ nav ul {
   .card {
     max-width: calc(50% - 0.5rem); }
     .card.decor {
-      max-width: calc(50% - 0.5rem); } }
+      max-width: calc(50% - 0.5rem); }
+  .reviewofwork {
+    padding: .5rem; }
+    .reviewofwork__image {
+      width: 8.2rem; }
+    .reviewofwork__content {
+      font-size: 1.2rem;
+      line-height: 111%; }
+      .reviewofwork__content p {
+        width: 30rem; }
+    .reviewofwork__title {
+      margin-bottom: 1.7rem; } }
 
 @media (max-width: 576px) {
   .title_h1 {
@@ -590,11 +606,19 @@ nav ul {
     gap: 1.4rem; }
   .card__button {
     font-size: 1.2rem;
-    padding: 1.1rem 0; } }
+    padding: 1.1rem 0; }
+  .reviewofwork {
+    gap: .5rem; }
+    .reviewofwork__content {
+      font-size: 1rem; }
+      .reviewofwork__content p {
+        width: 17.5rem; } }
 
 @media (max-width: 425px) {
   .title_h1 {
-    font-size: 3.4rem; } }
+    font-size: 3.4rem; }
+  .reviewofwork__title {
+    margin-bottom: .5rem; } }
 
 .header {
   position: relative;
@@ -1530,13 +1554,19 @@ nav ul {
   text-transform: uppercase;
   line-height: 111%; }
 
+.reviews__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; }
+
+.reviews__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem; }
+
 .reviews .row2 .reviewofwork {
   flex-direction: row-reverse;
   text-align: left; }
-
-.reviews .owl-carousel .owl-item img {
-  width: auto !important;
-  height: auto !important; }
 
 @media (max-width: 1200px) {
   .hero__title {
@@ -1597,7 +1627,10 @@ nav ul {
   .blog .top {
     margin-bottom: 1rem; }
     .blog .top p {
-      margin-bottom: 1.5rem; } }
+      margin-bottom: 1.5rem; }
+  .reviews__subtitle {
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem; } }
 
 @media (max-width: 992px) {
   .hero {
@@ -1700,7 +1733,10 @@ nav ul {
   .blog__right-right {
     gap: 1rem; }
   .blog .top p {
-    margin-bottom: 4.5rem; } }
+    margin-bottom: 4.5rem; }
+  .reviews__subtitle {
+    margin-bottom: 2rem;
+    font-size: 2rem; } }
 
 @media (max-width: 767px) {
   .hero__title {
@@ -1792,7 +1828,14 @@ nav ul {
     line-height: 111%;
     margin-bottom: 0.5rem; }
   .blog .blog__block.news .read-more {
-    font-size: 1.2rem; } }
+    font-size: 1.2rem; }
+  .reviews__header {
+    flex-direction: column;
+    gap: 0; }
+  .reviews h2, .reviews__header-right {
+    max-width: 100%; }
+  .reviews__inner, .reviews__row {
+    gap: 1rem; } }
 
 @media (max-width: 630px) {
   .books ul {

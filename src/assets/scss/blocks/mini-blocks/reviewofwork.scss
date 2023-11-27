@@ -1,26 +1,23 @@
 .reviewofwork {
-    max-width: 59rem;
     width: 100%;
+    max-width: 59rem;
     display: flex;
     gap: 1rem;
     padding: 1rem;
     border-radius: .5rem;
     border: 1px solid $secondary;
     &__image {
-        // width: 16.3rem !important;
-        // width: 100%;
-        // height: auto;
-        // max-height: 16.3rem;
+        width: 16.3rem;
         img {
-            // width: auto !important;
-            // height: 100%;
+            width: 100%;
+            height: 100%;
             border-radius: 0.5rem;
         }
     }
     &__content {
         p {
             font-family: 'Inter', sans-serif;
-            // width: 40.2rem;
+            width: 40.2rem;
         }
     }
     &__name {
@@ -34,4 +31,7 @@
         font-family: 'Inter', sans-serif;
         color: $lightgray;
     }
+
+
+    
 }

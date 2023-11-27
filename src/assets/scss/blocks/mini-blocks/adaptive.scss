@@ -33,6 +33,10 @@
             font-size: 10.8rem;
         }
     }
+
+    .reviewofwork {
+
+    }
 }
 
 @media (max-width: 992px) {
@@ -91,6 +95,23 @@
             max-width: calc(50% - 0.5rem);
         }
     }
+
+    .reviewofwork {
+        padding: .5rem;
+        &__image {
+            width: 8.2rem;
+        }
+        &__content {
+            font-size: 1.2rem;
+            line-height: 111%;
+            p {
+                width: 30rem;
+            }
+        }
+        &__title {
+            margin-bottom: 1.7rem;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -120,12 +141,29 @@
             padding: 1.1rem 0;
         }
     }
+
+    .reviewofwork {
+        gap: .5rem;
+        &__content {
+            font-size: 1rem;
+            p {
+                width: 17.5rem;
+                
+            }
+        }
+    }
 }
 
 @media (max-width: 425px) {
     .title {
         &_h1 {
             font-size: 3.4rem;
+        }
+    }
+
+    .reviewofwork {
+        &__title {
+            margin-bottom: .5rem;
         }
     }
 }
