@@ -1980,7 +1980,8 @@ nav ul {
     padding: 2rem 2rem 2rem 1.4rem; }
     .books__text-block p {
       margin-bottom: 1rem;
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      line-height: 111%; }
   .books ul {
     gap: 0.5rem; }
   .books .content {
