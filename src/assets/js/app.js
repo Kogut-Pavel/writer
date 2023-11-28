@@ -155,15 +155,6 @@ window.addEventListener('DOMContentLoaded', () => {
         autoplayTimeout: 7000,
         dots: false,
         autoWidth: true,
-        //     // responsive:{
-        //     //     0:{
-        //     //         items:1
-        //     //     },
-        //     //     600:{
-        //     //         items:1
-        //     //     },
-
-        //     // }
     });
     $('.owl-carousel.book-reviews2').owlCarousel({
         items: 2,

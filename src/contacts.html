@@ -45,7 +45,10 @@
                 <img src="assets/images/decor/single-chair-reflecting-on-a-water-surface-on-a-stormy-day.jpg" alt="#">
             </div>
             <div class="contacts__row">
-                <img src="assets/images/decor/deer-on-a-pink-background.jpg" alt="#">
+                <picture>
+                    <source srcset="assets/images/decor/deer-on-a-pink-background-big.jpg" media="(max-width: 993px)">
+                    <img src="assets/images/decor/deer-on-a-pink-background.jpg" alt="#">
+                </picture>
                 <div class="contacts__form">
                     <p>Если вам нужна помощь  или у вас остались какие-то вопросы. Можете смело их задать.</p>
 
@@ -56,7 +59,7 @@
                             <input type="email" name="email" placeholder="E-mail" required>
                         </div>
                         <div class="form__block">
-                            <textarea name="comment" id="comment" required></textarea>
+                            <textarea name="comment" id="comment"  placeholder="Комментарий"></textarea>
                         </div>
                         <button type="sumbit">Отправить</button>
                     </form>

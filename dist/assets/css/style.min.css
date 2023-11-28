@@ -2859,3 +2859,82 @@ nav ul {
     transition: all 0.2s linear; }
     .contacts__form .form button:hover {
       background: #626E13; }
+
+@media (max-width: 992px) {
+  .contacts__inner {
+    gap: 2rem; }
+  .contacts__social {
+    font-size: 2rem; }
+  .contacts__form .form {
+    flex-direction: column; }
+    .contacts__form .form__block {
+      max-width: 100%; }
+    .contacts__form .form input {
+      height: 4.8rem; }
+    .contacts__form .form textarea {
+      height: 20rem; } }
+
+@media (max-width: 767px) {
+  .contacts__row {
+    gap: 1rem; }
+    .contacts__row > * {
+      max-width: calc(50% - 0.5rem); }
+  .contacts__block:first-child {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem; }
+  .contacts__block ul {
+    gap: 1rem;
+    font-size: 1.2rem; }
+  .contacts__phone, .contacts__email {
+    max-width: 100%; }
+    .contacts__phone h2, .contacts__email h2 {
+      margin-bottom: 0.5rem; }
+    .contacts__phone a, .contacts__email a {
+      font-size: 1.4rem; }
+  .contacts__social {
+    padding-bottom: 0;
+    font-size: 1.6rem;
+    gap: 1rem; }
+    .contacts__social::after {
+      content: none; }
+  .contacts__form p {
+    margin-bottom: 1rem;
+    font-size: 1.4rem; }
+  .contacts__form .form button {
+    font-size: 1.4rem; } }
+
+@media (max-width: 576px) {
+  .contacts__row {
+    flex-direction: column;
+    gap: 2.5rem; }
+    .contacts__row.middle {
+      padding-top: 2rem;
+      flex-direction: column-reverse; }
+      .contacts__row.middle::before {
+        width: 100%; }
+    .contacts__row > * {
+      max-width: 100%; }
+  .contacts__block {
+    max-width: 100%; }
+    .contacts__block:first-child {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1rem; }
+    .contacts__block p {
+      text-align: center; }
+    .contacts__block ul {
+      gap: 1.1rem;
+      font-size: 1.4rem; }
+  .contacts__phone, .contacts__email {
+    width: unset; }
+  .contacts__social {
+    max-width: 100%; } }
+
+@media (max-width: 425px) {
+  .contacts__inner {
+    gap: 1.5rem; }
+  .contacts__row {
+    gap: 1.5rem; }
+  .contacts__social {
+    gap: 0.5rem; } }

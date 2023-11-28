@@ -1,0 +1,133 @@
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+    .contacts {
+        &__inner {
+            gap: 2rem;
+        }
+        &__social {
+            font-size: 2rem;
+        }
+        &__form {
+            .form {
+                flex-direction: column;
+                &__block {
+                    max-width: 100%;
+                }
+                input {
+                    height: 4.8rem;
+                }
+                textarea {
+                    height: 20rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .contacts {
+        &__row {
+            gap: 1rem;
+            > * {
+                max-width: calc(50% - 0.5rem);
+            }
+        }
+        &__block {
+            &:first-child {
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 1rem;
+            }
+            ul {
+                gap: 1rem;
+                font-size: 1.2rem;
+            }
+        }
+        &__phone,
+        &__email {
+            max-width: 100%;
+            h2 {
+                margin-bottom: 0.5rem;
+            }
+            a {
+                font-size: 1.4rem;
+            }
+        }
+        &__social {
+            padding-bottom: 0;
+            font-size: 1.6rem;
+            gap: 1rem;
+            &::after {
+                content: none;
+            }
+        }
+        &__form {
+            p {
+                margin-bottom: 1rem;
+                font-size: 1.4rem;
+            }
+            .form {
+                button {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .contacts {
+        &__row {
+            flex-direction: column;
+            gap: 2.5rem;
+            &.middle {
+                padding-top: 2rem;
+                flex-direction: column-reverse;
+                &::before {
+                    width: 100%;
+                }
+            }
+            > * {
+                max-width: 100%;
+            }
+        }
+        &__block {
+            max-width: 100%;
+            &:first-child {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 1rem;
+            }
+            p {
+                text-align: center;
+            }
+            ul {
+                gap: 1.1rem;
+                font-size: 1.4rem;
+            }
+        }
+        &__phone,
+        &__email {
+            width: unset;
+        }
+        &__social {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .contacts {
+        &__inner {
+            gap: 1.5rem;
+        }
+        &__row {
+            gap: 1.5rem;
+        }
+        &__social {
+            gap: 0.5rem;
+        }
+    }
+}
