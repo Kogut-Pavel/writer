@@ -80,94 +80,96 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Слайдеры
 
-    $('.owl-carousel.row1').owlCarousel({
-        items: 3,
-        margin: 20,
-        loop: true,
-        center: true,
-        lazyLoad: true,
-        stagePadding: 0,
-        autoplay: true,
-        autoplayHoverPause: true,
-        autoplayTimeout: 6000,
-        autoWidth: true,
-        dots: false,
-        responsive: {
-            0: {
-                margin: 10,
-                items: 1,
+    try {
+        $('.owl-carousel.row1').owlCarousel({
+            items: 3,
+            margin: 20,
+            loop: true,
+            center: true,
+            lazyLoad: true,
+            stagePadding: 0,
+            autoplay: true,
+            autoplayHoverPause: true,
+            autoplayTimeout: 6000,
+            autoWidth: true,
+            dots: false,
+            responsive: {
+                0: {
+                    margin: 10,
+                    items: 1,
+                },
+                767: {
+                    margin: 20,
+                    items: 3,
+                },
             },
-            767: {
-                margin: 20,
-                items: 3,
+        });
+        $('.owl-carousel.row2').owlCarousel({
+            items: 2,
+            margin: 20,
+            loop: true,
+            lazyLoad: true,
+            stagePadding: 170,
+            autoplay: true,
+            autoplayHoverPause: true,
+            autoplayTimeout: 7000,
+            rtl: true,
+            dots: false,
+            autoWidth: true,
+            responsive: {
+                0: {
+                    margin: 10,
+                },
+                767: {
+                    margin: 20,
+                },
             },
-        },
-    });
-    $('.owl-carousel.row2').owlCarousel({
-        items: 2,
-        margin: 20,
-        loop: true,
-        lazyLoad: true,
-        stagePadding: 170,
-        autoplay: true,
-        autoplayHoverPause: true,
-        autoplayTimeout: 7000,
-        rtl: true,
-        dots: false,
-        autoWidth: true,
-        responsive: {
-            0: {
-                margin: 10,
+        });
+        $('.owl-carousel.row3').owlCarousel({
+            items: 2,
+            margin: 20,
+            loop: true,
+            center: true,
+            lazyLoad: true,
+            stagePadding: 160,
+            autoplay: true,
+            autoplayHoverPause: true,
+            dots: false,
+            autoWidth: true,
+            responsive: {
+                0: {
+                    margin: 10,
+                },
+                767: {
+                    margin: 20,
+                },
             },
-            767: {
-                margin: 20,
-            },
-        },
-    });
-    $('.owl-carousel.row3').owlCarousel({
-        items: 2,
-        margin: 20,
-        loop: true,
-        center: true,
-        lazyLoad: true,
-        stagePadding: 160,
-        autoplay: true,
-        autoplayHoverPause: true,
-        dots: false,
-        autoWidth: true,
-        responsive: {
-            0: {
-                margin: 10,
-            },
-            767: {
-                margin: 20,
-            },
-        },
-    });
-    $('.owl-carousel.book-reviews').owlCarousel({
-        items: 2,
-        margin: 20,
-        loop: true,
-        lazyLoad: true,
-        stagePadding: 160,
-        autoplay: true,
-        autoplayHoverPause: true,
-        autoplayTimeout: 7000,
-        dots: false,
-        autoWidth: true,
-    });
-    $('.owl-carousel.book-reviews2').owlCarousel({
-        items: 2,
-        margin: 20,
-        loop: true,
-        center: true,
-        lazyLoad: true,
-        stagePadding: 160,
-        autoplay: true,
-        autoplayHoverPause: true,
-        dots: false,
-        autoWidth: true,
-    });
+        });
+        $('.owl-carousel.book-reviews').owlCarousel({
+            items: 2,
+            margin: 20,
+            loop: true,
+            lazyLoad: true,
+            stagePadding: 160,
+            autoplay: true,
+            autoplayHoverPause: true,
+            autoplayTimeout: 7000,
+            dots: false,
+            autoWidth: true,
+        });
+        $('.owl-carousel.book-reviews2').owlCarousel({
+            items: 2,
+            margin: 20,
+            loop: true,
+            center: true,
+            lazyLoad: true,
+            stagePadding: 160,
+            autoplay: true,
+            autoplayHoverPause: true,
+            dots: false,
+            autoWidth: true,
+        });
+    } catch {}
 
     // Пагинация
 
@@ -276,4 +278,61 @@ window.addEventListener('DOMContentLoaded', () => {
     //     });
     // });
 
+    // Forms
+
+    const forms = () => {
+        const clearInputs = () => {
+            // Очищаем инпуты
+            const inputs = document.querySelectorAll('input');
+            const textarea = document.querySelector('textarea');
+            const checkbox = document.querySelectorAll(
+                'input[name="checkbox"]'
+            );
+            inputs.forEach((item) => {
+                item.value = '';
+            });
+            checkbox.forEach((item) => {
+                item.checked = false;
+            });
+            textarea.value = '';
+        };
+
+        const form = document.querySelectorAll('form'); // Все формы
+
+        const postData = async (url, data) => {
+            // Отправка запроса
+            let res = await fetch(url, {
+                method: 'POST',
+                body: data,
+            });
+            if (!res.ok) {
+                throw new Error(res.statusText);
+            } else {
+                return await res.text();
+            }
+        };
+
+        form.forEach((item) => {
+            // Перебираем формы и навешиваем обработчик события
+            item.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                const formData = new FormData(item); // Собираем данные из формы
+
+                // Отправляем запрос на сервер с данными из formData
+                postData('smart.php', formData)
+                    .then(() => {
+                        console.log('Отправлено');
+                    })
+                    .catch((err) => {
+                        console.error(err);
+                    })
+                    .finally(() => {
+                        clearInputs();
+                    });
+            });
+        });
+    };
+
+    forms();
 });
