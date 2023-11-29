@@ -88,7 +88,7 @@ window.addEventListener('DOMContentLoaded', () => {
             center: true,
             lazyLoad: true,
             stagePadding: 0,
-            autoplay: true,
+            // autoplay: true,
             autoplayHoverPause: true,
             autoplayTimeout: 6000,
             autoWidth: true,

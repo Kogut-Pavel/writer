@@ -390,9 +390,12 @@ nav ul {
     font-weight: 500;
     letter-spacing: 0.98px;
     text-transform: uppercase;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 0.2s linear; }
     nav ul li.active {
       font-weight: 700; }
+    nav ul li:hover {
+      color: #626E13; }
 
 .title {
   margin-bottom: 3.5rem;
@@ -448,14 +451,16 @@ nav ul {
   border-radius: .5rem;
   border: 1px solid #626E13; }
   .reviewofwork__image {
-    width: 16.3rem; }
+    width: 16.3rem;
+    height: 16.3rem; }
     .reviewofwork__image img {
-      width: 100%;
-      height: 100%;
+      width: 16.3rem;
+      height: 16.3rem;
       border-radius: 0.5rem; }
   .reviewofwork__content p {
     font-family: 'Inter', sans-serif;
-    width: 40.2rem; }
+    width: 40.2rem;
+    height: 12rem; }
   .reviewofwork__name {
     margin-bottom: .2rem;
     font-weight: 600;
@@ -1368,6 +1373,10 @@ nav ul {
         top: 50%;
         transform: translateY(-50%);
         width: 1.6rem; }
+  .books .white {
+    color: #fff; }
+  .books .darkgreen {
+    color: #3D4031; }
 
 .news h2 {
   position: relative; }

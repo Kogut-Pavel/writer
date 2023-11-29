@@ -374,7 +374,7 @@ body {
     flex-direction: column;
 }
 
-body.mobile-menu-active {
+body.no-scroll {
     overflow: hidden;
 }
 
@@ -971,6 +971,10 @@ nav ul li.active {
     font-family: 'Montserrat', sans-serif;
 }
 
+.footer__form button:hover {
+    background: #3D4031;
+}
+
 .footer .second-column {
     display: -ms-flexbox;
     display: flex;
@@ -1054,7 +1058,8 @@ nav ul li.active {
 }
 
 .modal {
-    display: none;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-pack: center;
@@ -1068,12 +1073,14 @@ nav ul li.active {
     left: 0;
     z-index: 99;
     padding: 1rem;
+    opacity: 0;
     background-color: rgba(0, 0, 0, 0.8);
+    pointer-events: none;
 }
 
 .modal.show {
-    display: -ms-flexbox;
-    display: flex;
+    pointer-events: all;
+    opacity: 1;
 }
 
 .modal__content {
@@ -1092,7 +1099,10 @@ nav ul li.active {
     max-height: 80%;
     height: 100%;
     padding: 2.3rem;
+    opacity: 0;
     border-radius: 15px;
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
     transition: all 0.3s ease-in-out;
     background: url("../images/backgrounds/modal-bg.jpg");
     background-repeat: no-repeat;
@@ -1106,6 +1116,10 @@ nav ul li.active {
     line-height: 104%;
     text-transform: uppercase;
     color: #fff;
+}
+
+.modal#success .modal__content {
+    background: url("../images/backgrounds/modal-contacts-bg.jpg");
 }
 
 .modal__close {
