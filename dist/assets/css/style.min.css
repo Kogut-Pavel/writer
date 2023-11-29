@@ -819,6 +819,8 @@ nav ul {
       line-height: 104%;
       text-transform: uppercase;
       color: #fff; }
+  .modal#success .modal__content {
+    background: url("../images/backgrounds/modal-contacts-bg.jpg"); }
   .modal__close {
     position: absolute;
     top: 2.2rem;

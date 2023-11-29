@@ -46,7 +46,11 @@
             color: $white;
         }
     }
-
+    &#success {
+        .modal__content {
+            background: url('../images/backgrounds/modal-contacts-bg.jpg');
+        }
+    }
     &__close {
         position: absolute;
         top: 2.2rem;
