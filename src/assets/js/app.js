@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
     menuBtn.addEventListener('click', function () {
         menuBtn.classList.toggle('active');
         menu.classList.toggle('active');
-        document.body.classList.toggle('mobile-menu-active');
+        document.body.classList.toggle('no-scroll');
         window.scrollBy(0, -85);
     });
 
@@ -232,51 +232,64 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Modals
 
-    // modalBtn.forEach((item) => {
-    //     item.addEventListener('click', (event) => {
-    //         let target = event.currentTarget;
-    //         let modalId = target.getAttribute('data-modal');
-    //         let modal = document.getElementById(modalId);
-    //         let modalContent = modal.querySelector('.modal__content');
+    const modalBtn = document.querySelectorAll('[data-modal]');
+    const body = document.body;
+    const modalClose = document.querySelectorAll('.modal__close');
+    const modal = document.querySelectorAll('.modal');
 
-    //         modalContent.addEventListener('click', (event) => {
-    //             event.stopPropagation();
-    //         });
+    modalBtn.forEach((item) => {
+        item.addEventListener('click', (event) => {
+            let target = event.currentTarget;
+            let modalId = target.getAttribute('data-modal');
+            let modal = document.getElementById(modalId);
+            let modalContent = modal.querySelector('.modal__content');
+            let comment = document.querySelector('#comment');
 
-    //         modal.classList.add('show');
-    //         body.classList.add('no-scroll');
+            modalContent.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
 
-    //         setTimeout(() => {
-    //             modalContent.style.transform = 'none';
-    //             modalContent.style.opacity = '1';
-    //         }, 1);
-    //     });
-    // });
+            if (comment) {
+                if (comment.value.length > 1) {
+                    modal.classList.add('show');
+                    body.classList.add('no-scroll');
+                }
+            } else {
+                modal.classList.add('show');
+                body.classList.add('no-scroll');
+            }
+            
+            setTimeout(() => {
+                modalContent.style.transform = 'none';
+                modalContent.style.opacity = '1';
+            }, 1);
+        });
+    });
 
-    // // Закрываем модальное окно, убирая классы
-    // function closeModal(modal) {
-    //     let modalContent = modal.querySelector('.modal__content');
-    //     modalContent.removeAttribute('style');
-    //     setTimeout(() => {
-    //         modal.classList.remove('show');
-    //         body.classList.remove('no-scroll');
-    //     }, 200);
-    // }
+    // Закрываем модальное окно, убирая классы
+    function closeModal(modal) {
+        let modalContent = modal.querySelector('.modal__content');
+        modalContent.removeAttribute('style');
+        setTimeout(() => {
+            modal.classList.remove('show');
+            body.classList.remove('no-scroll');
+        }, 200);
+    }
 
-    // // Добавляем слушатель на крестики в модальных окнах
-    // modalClose.forEach((item) => {
-    //     item.addEventListener('click', (event) => {
-    //         let currentModal = event.currentTarget.closest('.modal');
-    //         closeModal(currentModal);
-    //     });
-    // });
+    // Добавляем слушатель на крестики в модальных окнах
+    modalClose.forEach((item) => {
+        item.addEventListener('click', (event) => {
+            let currentModal = event.currentTarget.closest('.modal');
+            closeModal(currentModal);
+        });
+    });
 
-    // modal.forEach((item) => {
-    //     item.addEventListener('click', (event) => {
-    //         let currentModal = event.currentTarget;
-    //         closeModal(currentModal);
-    //     });
-    // });
+    modal.forEach((item) => {
+        item.addEventListener('click', (event) => {
+            let currentModal = event.currentTarget;
+            closeModal(currentModal);
+        });
+    });
 
     // Forms
 

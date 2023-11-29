@@ -81,6 +81,9 @@
         }
         button {
             font-family: 'Montserrat', sans-serif;
+            &:hover {
+                background: #3D4031;
+            }
         }
     }
     .second-column {

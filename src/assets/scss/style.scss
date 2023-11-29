@@ -20,9 +20,10 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    &.mobile-menu-active {
+    &.no-scroll {
         overflow: hidden;
     }
+    
 }
 
 main {
