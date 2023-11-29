@@ -1053,6 +1053,96 @@ nav ul li.active {
     display: none;
 }
 
+.modal {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal.show {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.modal__content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 80%;
+    max-height: 767px;
+    height: 100%;
+    padding: 2.3rem;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    background: url("../images/backgrounds/modal-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.modal__close {
+    position: absolute;
+    top: 2.2rem;
+    right: 2.3rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    background: none;
+    border: none;
+    transition: all 0.2s linear;
+    opacity: 0.6;
+}
+
+.modal__close img {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.modal__close:hover {
+    opacity: 1;
+}
+
+.modal__text {
+    background: #626E13;
+    padding: 3.2rem;
+    max-width: 50%;
+    width: 100%;
+    border-radius: .7rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.modal__text p {
+    max-width: 40rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 104%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
 @media (max-width: 992px) {
     section {
         padding-bottom: 8rem;
@@ -2993,6 +3083,7 @@ nav ul li.active {
     .books__text-block p {
         margin-bottom: 1rem;
         font-size: 1.2rem;
+        line-height: 111%;
     }
 
     .books ul {
@@ -4381,4 +4472,150 @@ nav ul li.active {
 
 .contacts__form .form button:hover {
     background: #626E13;
+}
+
+@media (max-width: 992px) {
+    .contacts__inner {
+        gap: 2rem;
+    }
+
+    .contacts__social {
+        font-size: 2rem;
+    }
+
+    .contacts__form .form {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .contacts__form .form__block {
+        max-width: 100%;
+    }
+
+    .contacts__form .form input {
+        height: 4.8rem;
+    }
+
+    .contacts__form .form textarea {
+        height: 20rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .contacts__row {
+        gap: 1rem;
+    }
+
+    .contacts__row > * {
+        max-width: calc(50% - 0.5rem);
+    }
+
+    .contacts__block:first-child {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .contacts__block ul {
+        gap: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .contacts__phone, .contacts__email {
+        max-width: 100%;
+    }
+
+    .contacts__phone h2, .contacts__email h2 {
+        margin-bottom: 0.5rem;
+    }
+
+    .contacts__phone a, .contacts__email a {
+        font-size: 1.4rem;
+    }
+
+    .contacts__social {
+        padding-bottom: 0;
+        font-size: 1.6rem;
+        gap: 1rem;
+    }
+
+    .contacts__social::after {
+        content: none;
+    }
+
+    .contacts__form p {
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+    }
+
+    .contacts__form .form button {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contacts__row {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .contacts__row.middle {
+        padding-top: 2rem;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+
+    .contacts__row.middle::before {
+        width: 100%;
+    }
+
+    .contacts__row > * {
+        max-width: 100%;
+    }
+
+    .contacts__block {
+        max-width: 100%;
+    }
+
+    .contacts__block:first-child {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .contacts__block p {
+        text-align: center;
+    }
+
+    .contacts__block ul {
+        gap: 1.1rem;
+        font-size: 1.4rem;
+    }
+
+    .contacts__phone, .contacts__email {
+        width: unset;
+    }
+
+    .contacts__social {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .contacts__inner {
+        gap: 1.5rem;
+    }
+
+    .contacts__row {
+        gap: 1.5rem;
+    }
+
+    .contacts__social {
+        gap: 0.5rem;
+    }
 }
