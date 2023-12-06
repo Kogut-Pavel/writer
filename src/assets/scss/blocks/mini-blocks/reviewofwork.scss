@@ -20,7 +20,19 @@
         p {
             font-family: 'Inter', sans-serif;
             width: 40.2rem;
-            height: 12rem;
+            height: 11rem;
+            overflow-y: scroll;
+            padding-right: .5rem;
+            &::-webkit-scrollbar {
+                width: .5rem;
+            }
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $primary;
+                border-radius: 5px;
+            }
         }
     }
     &__name {

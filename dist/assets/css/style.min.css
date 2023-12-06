@@ -460,7 +460,16 @@ nav ul {
   .reviewofwork__content p {
     font-family: 'Inter', sans-serif;
     width: 40.2rem;
-    height: 12rem; }
+    height: 11rem;
+    overflow-y: scroll;
+    padding-right: .5rem; }
+    .reviewofwork__content p::-webkit-scrollbar {
+      width: .5rem; }
+    .reviewofwork__content p::-webkit-scrollbar-track {
+      background: transparent; }
+    .reviewofwork__content p::-webkit-scrollbar-thumb {
+      background: #000;
+      border-radius: 5px; }
   .reviewofwork__name {
     margin-bottom: .2rem;
     font-weight: 600;
