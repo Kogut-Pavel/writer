@@ -443,10 +443,15 @@ nav ul li {
     letter-spacing: 0.98px;
     text-transform: uppercase;
     cursor: pointer;
+    transition: all 0.2s linear;
 }
 
 nav ul li.active {
     font-weight: 700;
+}
+
+nav ul li:hover {
+    color: #626E13;
 }
 
 .title {
@@ -523,17 +528,19 @@ nav ul li.active {
 
 .reviewofwork__image {
     width: 16.3rem;
+    height: 16.3rem;
 }
 
 .reviewofwork__image img {
-    width: 100%;
-    height: 100%;
+    width: 16.3rem;
+    height: 16.3rem;
     border-radius: 0.5rem;
 }
 
 .reviewofwork__content p {
     font-family: 'Inter', sans-serif;
     width: 40.2rem;
+    height: 12rem;
 }
 
 .reviewofwork__name {
@@ -1956,6 +1963,14 @@ nav ul li.active {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 1.6rem;
+}
+
+.books .white {
+    color: #fff;
+}
+
+.books .darkgreen {
+    color: #3D4031;
 }
 
 .news h2 {

@@ -1304,11 +1304,26 @@ nav ul {
     .books__spine.item-3 .books__genres {
       bottom: 6.6rem; }
   .books__cover {
+    position: relative;
     padding: 1rem;
     padding-left: 2rem;
     width: 0;
     height: 100%;
     position: relative; }
+    .books__cover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #000;
+      opacity: 0.5;
+      width: 29.4rem;
+      z-index: 0; }
+    .books__cover-header {
+      width: 25rem;
+      z-index: 9; }
     .books__cover img {
       position: absolute;
       top: 0;
@@ -1316,8 +1331,10 @@ nav ul {
       width: 29.4rem;
       z-index: -1; }
     .books__cover h4 {
+      position: relative;
       color: #3D4031;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      z-index: 9; }
     .books__cover .description-top {
       width: 26.4rem;
       font-weight: 500;

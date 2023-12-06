@@ -116,6 +116,23 @@
     }
 
     &__cover {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #000;
+            opacity: 0.5;
+            width: 29.4rem;
+            z-index: 0;
+        }
+        &-header {
+            width: 25rem;
+            z-index: 9;
+        }
         padding: 1rem;
         padding-left: 2rem;
         width: 0;
@@ -129,8 +146,10 @@
             z-index: -1;
         }
         h4 {
+            position: relative;
             color: $darkgray;
             margin-bottom: 1rem;
+            z-index: 9;
         }
         .description-top {
             width: 26.4rem;
