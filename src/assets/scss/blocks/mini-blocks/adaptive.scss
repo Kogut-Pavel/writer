@@ -145,11 +145,11 @@
     .reviewofwork {
         gap: .5rem;
         &__content {
-            font-size: 1rem;
-            p {
-                width: 17.5rem;
+            // font-size: 1rem;
+            // p {
+            //     width: 19.5rem;
                 
-            }
+            // }
         }
     }
 }
@@ -164,6 +164,15 @@
     .reviewofwork {
         &__title {
             margin-bottom: .5rem;
+        }
+        &__content {
+            font-size: 1.1rem;
+            p {
+                width: 25rem;
+            }
+        }
+        &__image {
+            display: none;
         }
     }
 }

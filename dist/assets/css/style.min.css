@@ -613,17 +613,19 @@ nav ul {
     font-size: 1.2rem;
     padding: 1.1rem 0; }
   .reviewofwork {
-    gap: .5rem; }
-    .reviewofwork__content {
-      font-size: 1rem; }
-      .reviewofwork__content p {
-        width: 17.5rem; } }
+    gap: .5rem; } }
 
 @media (max-width: 425px) {
   .title_h1 {
     font-size: 3.4rem; }
   .reviewofwork__title {
-    margin-bottom: .5rem; } }
+    margin-bottom: .5rem; }
+  .reviewofwork__content {
+    font-size: 1.1rem; }
+    .reviewofwork__content p {
+      width: 25rem; }
+  .reviewofwork__image {
+    display: none; } }
 
 .header {
   position: relative;
