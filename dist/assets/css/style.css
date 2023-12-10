@@ -540,7 +540,22 @@ nav ul li:hover {
 .reviewofwork__content p {
     font-family: 'Inter', sans-serif;
     width: 40.2rem;
-    height: 12rem;
+    height: 11rem;
+    overflow-y: scroll;
+    padding-right: .5rem;
+}
+
+.reviewofwork__content p::-webkit-scrollbar {
+    width: .5rem;
+}
+
+.reviewofwork__content p::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.reviewofwork__content p::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 5px;
 }
 
 .reviewofwork__name {
@@ -797,14 +812,6 @@ nav ul li:hover {
     .reviewofwork {
         gap: .5rem;
     }
-
-    .reviewofwork__content {
-        font-size: 1rem;
-    }
-
-    .reviewofwork__content p {
-        width: 17.5rem;
-    }
 }
 
 @media (max-width: 425px) {
@@ -814,6 +821,18 @@ nav ul li:hover {
 
     .reviewofwork__title {
         margin-bottom: .5rem;
+    }
+
+    .reviewofwork__content {
+        font-size: 1.1rem;
+    }
+
+    .reviewofwork__content p {
+        width: 25rem;
+    }
+
+    .reviewofwork__image {
+        display: none;
     }
 }
 
@@ -1871,11 +1890,30 @@ nav ul li:hover {
 }
 
 .books__cover {
+    position: relative;
     padding: 1rem;
     padding-left: 2rem;
     width: 0;
     height: 100%;
     position: relative;
+}
+
+.books__cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.5;
+    width: 29.4rem;
+    z-index: 0;
+}
+
+.books__cover-header {
+    width: 25rem;
+    z-index: 9;
 }
 
 .books__cover img {
@@ -1887,8 +1925,10 @@ nav ul li:hover {
 }
 
 .books__cover h4 {
+    position: relative;
     color: #3D4031;
     margin-bottom: 1rem;
+    z-index: 9;
 }
 
 .books__cover .description-top {
