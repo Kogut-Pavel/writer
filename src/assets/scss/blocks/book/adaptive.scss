@@ -131,6 +131,11 @@
                 display: none;
             }
         }
+        .card {
+            .button {
+                min-width: 21.7rem;
+            }
+        }
     }
 }
 
@@ -247,6 +252,11 @@
         &__inner {
             gap: 1rem;
         }
+        .card {
+            .button {
+                min-width: 15.5rem;
+            }
+        }
     }
 }
 
@@ -306,6 +316,14 @@
         }
         img {
             max-width: 9rem;
+        }
+    }
+
+    .otherbooks {
+        .card {
+            .button {
+                min-width: 13.5rem;
+            }
         }
     }
 }
