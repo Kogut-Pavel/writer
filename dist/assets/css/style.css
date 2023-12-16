@@ -645,10 +645,10 @@ nav ul li:hover {
 .card.decor {
     max-width: 59rem;
     width: 100%;
+    max-height: 53.3rem;
 }
 
 .card.decor img {
-    max-height: 53.3rem;
     height: 100%;
 }
 
@@ -728,6 +728,7 @@ nav ul li:hover {
 
     .card.decor {
         max-width: calc(67% - 0.7rem);
+        max-height: unset;
     }
 }
 
@@ -3743,6 +3744,10 @@ nav ul li:hover {
     .otherbooks__inner::-webkit-scrollbar {
         display: none;
     }
+
+    .otherbooks .card .button {
+        min-width: 21.7rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -3861,6 +3866,10 @@ nav ul li:hover {
     .otherbooks__inner {
         gap: 1rem;
     }
+
+    .otherbooks .card .button {
+        min-width: 15.5rem;
+    }
 }
 
 @media (max-width: 425px) {
@@ -3923,6 +3932,10 @@ nav ul li:hover {
 
     .quote.book img {
         max-width: 9rem;
+    }
+
+    .otherbooks .card .button {
+        min-width: 13.5rem;
     }
 }
 
