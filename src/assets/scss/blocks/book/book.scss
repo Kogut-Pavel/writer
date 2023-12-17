@@ -26,13 +26,18 @@
     &__info {
         max-width: calc(50% - 1rem);
         width: 100%;
-    }
-    &__cover,
-    &__info {
         position: relative;
         @include line(-1rem, $lightgray);
     }
+    &__cover {
+        img {
+            object-fit: unset;
+        }
+    }
+
     &__info {
+        display: flex;
+        flex-direction: column;
         h2 {
             margin-bottom: 0.5rem;
         }
@@ -64,6 +69,7 @@
         }
     }
     &__specifications {
+        margin-top: auto;
         margin-bottom: 2rem;
         li {
             padding: 1.9rem 0 1.8rem 0;

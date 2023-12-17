@@ -2256,9 +2256,7 @@ nav ul {
 
 .book__cover, .book__info {
   max-width: calc(50% - 1rem);
-  width: 100%; }
-
-.book__cover, .book__info {
+  width: 100%;
   position: relative; }
   .book__cover::after, .book__info::after {
     content: '';
@@ -2269,8 +2267,14 @@ nav ul {
     height: 0.1rem;
     background-color: #959595; }
 
-.book__info h2 {
-  margin-bottom: 0.5rem; }
+.book__cover img {
+  object-fit: unset; }
+
+.book__info {
+  display: flex;
+  flex-direction: column; }
+  .book__info h2 {
+    margin-bottom: 0.5rem; }
 
 .book__media {
   display: flex;
@@ -2297,6 +2301,7 @@ nav ul {
     color: #959595; }
 
 .book__specifications {
+  margin-top: auto;
   margin-bottom: 2rem; }
   .book__specifications li {
     padding: 1.9rem 0 1.8rem 0;
@@ -2415,14 +2420,10 @@ nav ul {
     display: none; }
   .book__descr {
     font-size: 2.5rem; }
-  .book__inner {
-    align-items: flex-start; }
   .book__cover {
     display: flex; }
     .book__cover::after {
       content: none; }
-    .book__cover img {
-      object-fit: contain; }
   .book__info::after {
     content: none; }
   .book__title {
