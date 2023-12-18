@@ -428,6 +428,11 @@ img {
     height: 100%;
 }
 
+.jcc {
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
 /* Blocks */
 nav ul {
     display: -ms-flexbox;
@@ -3393,9 +3398,6 @@ nav ul li:hover {
 .book__cover, .book__info {
     max-width: calc(50% - 1rem);
     width: 100%;
-}
-
-.book__cover, .book__info {
     position: relative;
 }
 
@@ -3407,6 +3409,18 @@ nav ul li:hover {
     width: 100%;
     height: 0.1rem;
     background-color: #959595;
+}
+
+.book__cover img {
+    -o-object-fit: unset;
+    object-fit: unset;
+}
+
+.book__info {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .book__info h2 {
@@ -3447,6 +3461,7 @@ nav ul li:hover {
 }
 
 .book__specifications {
+    margin-top: auto;
     margin-bottom: 2rem;
 }
 
@@ -3632,11 +3647,6 @@ nav ul li:hover {
         font-size: 2.5rem;
     }
 
-    .book__inner {
-        -ms-flex-align: start;
-        align-items: flex-start;
-    }
-
     .book__cover {
         display: -ms-flexbox;
         display: flex;
@@ -3644,11 +3654,6 @@ nav ul li:hover {
 
     .book__cover::after {
         content: none;
-    }
-
-    .book__cover img {
-        -o-object-fit: contain;
-        object-fit: contain;
     }
 
     .book__info::after {
