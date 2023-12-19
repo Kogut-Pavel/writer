@@ -116,6 +116,13 @@
         }
     }
 
+    .breadcrumbs {
+        .long {
+            font-size: 1.4rem;
+            line-height: 111%;
+        }
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -127,6 +134,9 @@
 
     .breadcrumbs {
         margin: 4rem 0 2.5rem 0;
+        .long {
+            font-size: 1.2rem;
+        }
     }
 
     .card {
@@ -148,13 +158,6 @@
 
     .reviewofwork {
         gap: .5rem;
-        &__content {
-            // font-size: 1rem;
-            // p {
-            //     width: 19.5rem;
-                
-            // }
-        }
     }
 }
 
@@ -177,6 +180,13 @@
         }
         &__image {
             display: none;
+        }
+    }
+
+    .breadcrumbs {
+        font-size: 1.4rem;
+        .long {
+            font-size: 1rem;
         }
     }
 }
